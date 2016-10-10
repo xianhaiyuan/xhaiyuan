@@ -2,7 +2,6 @@ name: haiyuan's blog
 author: haiyuan
 url: www.xhaiyuan.com
 email: 269699181@qq.com
-uri: https://github.com/xianhaiyuan
 paginate: 12
 paginate_path: "/page:num/"
 baseurl: /
