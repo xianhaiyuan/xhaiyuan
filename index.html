@@ -4,6 +4,13 @@ title: 我的Blog
 ---
 　　<h2>{{ page.title }}</h2>
 　　<p>最新文章</p>
-　　<ul>
-　　　　
-　　</ul>
+　　{% for post in paginator.posts %}
+<tr>
+	<td>
+        <a href="{{ post.url }}" class="page__link">{{ post.title }}</a>
+    </td>
+	<td>
+        {{ post.date|date_to_string }}
+    </td>
+</tr>
+{% endfor %}
