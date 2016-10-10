@@ -5,7 +5,7 @@ email: 269699181@qq.com
 uri: https://github.com/xianhaiyuan
 paginate: 12
 paginate_path: "/page:num/"
-baseurl: /xhaiyuan.github.io
+baseurl: /
 exclude: ['node_modules', '_site']
 gems:
   - jekyll-sitemap
