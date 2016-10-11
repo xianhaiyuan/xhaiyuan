@@ -2,7 +2,7 @@ name: haiyuan's blog
 author: haiyuan
 url: www.xhaiyuan.com
 email: 269699181@qq.com
-paginate: 12
+paginate: 5
 paginate_path: "/page:num/"
 baseurl: /
 exclude: ['node_modules', '_site']
