@@ -1,0 +1,25 @@
+@import 'reset.css';
+@import 'bourbon/bourbon';
+@import 'partials/layout';
+@import 'partials/mixins';
+@import 'partials/variables';
+
+body{
+	background-color: #E0F7FB;
+}
+.main {
+  margin: 0 auto;
+  width: 86%;
+  top: 35px;
+  position: relative;
+  background-color: white;
+}
+.main::before {
+  content: '';
+  padding-top: 1.74551%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background-image: linear-gradient(1deg, white, 50%, transparent 50%);
+}
