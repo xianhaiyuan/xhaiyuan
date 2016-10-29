@@ -1,6 +1,7 @@
 @import url(reset.css);
 body {
   background-color: #E0F7FB;
+  font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
 .main {
