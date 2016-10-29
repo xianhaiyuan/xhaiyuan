@@ -41,3 +41,9 @@ body{
   font-weight: 900;
   color: #bbb;
  }
+
+ @include MQ($M) {
+  .page-title{
+    font-size: 1.8rem;
+  }
+ }
