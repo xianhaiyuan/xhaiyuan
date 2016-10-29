@@ -5,7 +5,7 @@
 @import 'partials/variables';
 
 *, *::before, *::after {
-	box-sizing:border-box;
+	@include box-sizing(border-box);
 }
 body{
 	background-color: #E0F7FB;
@@ -42,7 +42,7 @@ body{
   color: #bbb;
  }
 
- @include MQ($M) {
+ @include MQ(M) {
   .page-title{
     font-size: 1.8rem;
   }

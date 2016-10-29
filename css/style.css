@@ -1,5 +1,7 @@
 @import url(reset.css);
 *, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -39,6 +41,12 @@ body {
   font-size: 2.4rem;
   font-weight: 900;
   color: #bbb;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
