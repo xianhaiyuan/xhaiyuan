@@ -1,7 +1,15 @@
 @import url(reset.css);
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #E0F7FB;
   font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.center {
+  text-align: center;
 }
 
 .main {
@@ -20,6 +28,14 @@ body {
   right: 0;
   bottom: 100%;
   background-image: linear-gradient(1deg, white, 50%, transparent 50%);
+}
+
+.page-title {
+  margin: 1rem 0;
+  font-family: Lato,"Microsoft YaHei",sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #bbb;
 }
 
 /*# sourceMappingURL=style.css.map */

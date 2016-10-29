@@ -4,9 +4,15 @@
 @import 'partials/mixins';
 @import 'partials/variables';
 
+*, *::before, *::after {
+	box-sizing:border-box;
+}
 body{
 	background-color: #E0F7FB;
 	font-family: $primary-font;
+}
+.center{
+	text-align: center;
 }
 .main {
   margin: 0 auto;
@@ -24,3 +30,11 @@ body{
   bottom: 100%;
   background-image: linear-gradient(1deg, white, 50%, transparent 50%);
 }
+
+.page-title{
+  margin: 1rem 0;
+  font-family: Lato,"Microsoft YaHei",sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #bbb;
+ }
