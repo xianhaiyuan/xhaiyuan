@@ -33,7 +33,6 @@ body{
   bottom: 100%;
   background-image: linear-gradient(1deg, white, 50%, transparent 50%);
 }
-
 .page-title{
   margin: 1rem 0;
   font-family: Lato,"Microsoft YaHei",sans-serif;
@@ -41,6 +40,40 @@ body{
   font-weight: 900;
   color: #bbb;
  }
+.list-nostyled{
+  list-style: none;
+}
+a.nav-link{
+  text-decoration: none;
+}
+a.nav-link:hover{
+  text-decoration: underline;
+}
+.home:before{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background:url('/img/icon/home.png');
+  background:url('/img/icon/home.svg'),none;
+}
+.git:before{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background:url('/img/icon/Git.png');
+  background:url('/img/icon/Git.svg'),none;
+}
+.about:before{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background:url('/img/icon/about.png');
+  background:url('/img/icon/about.svg'),none;
+}
+
 
  @include MQ(M) {
   .page-title{
