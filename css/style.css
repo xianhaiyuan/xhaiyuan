@@ -47,6 +47,18 @@ body {
   list-style: none;
 }
 
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.nav-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 a.nav-link {
   text-decoration: none;
 }

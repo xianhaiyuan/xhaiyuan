@@ -43,6 +43,17 @@ body{
 .list-nostyled{
   list-style: none;
 }
+.nav-list{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+  li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 a.nav-link{
   text-decoration: none;
 }
