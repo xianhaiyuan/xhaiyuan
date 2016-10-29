@@ -80,7 +80,7 @@ a.nav-link:hover{
   background:url('/img/icon/home.png');
   background:url('/img/icon/home.svg'),none;
 }
-.git:before{
+.about:before{
   content: '';
   display: block;
   width: 30px;
@@ -88,10 +88,10 @@ a.nav-link:hover{
   position: absolute;
   left: -15px;
   top: -5px;
-  background:url('/img/icon/Git.png');
-  background:url('/img/icon/Git.svg'),none;
+  background:url('/img/icon/about.png');
+  background:url('/img/icon/about.svg'),none;
 }
-.about:before{
+.git:before{
   content: '';
   display: block;
   width: 30px;
@@ -99,11 +99,9 @@ a.nav-link:hover{
   position: absolute;
   left: -5px;
   top: -5px;
-  background:url('/img/icon/about.png');
-  background:url('/img/icon/about.svg'),none;
+  background:url('/img/icon/Git.png');
+  background:url('/img/icon/Git.svg'),none;
 }
-
-
  @include MQ(M) {
   .main{
     padding: 1rem 1.5rem;
