@@ -22,7 +22,10 @@ body{
   background-color: white;
 }
 .main::before {
-  content: '';
+  content: 'desktop';
+  color: transparent;
+  text-indent: 100%;
+  overflow: hidden;
   padding-top: 1.74551%;
   position: absolute;
   left: 0;
