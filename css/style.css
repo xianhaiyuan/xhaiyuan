@@ -64,6 +64,7 @@ body {
 a.nav-link {
   text-decoration: none;
   width: 90px;
+  color: #504F4F;
 }
 
 a.nav-link:hover {
@@ -76,7 +77,7 @@ a.nav-link:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -15px;
+  left: -35px;
   top: -5px;
   background: url("/img/icon/home.png");
   background: url("/img/icon/home.svg"), none;
@@ -88,7 +89,7 @@ a.nav-link:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -15px;
+  left: -35px;
   top: -5px;
   background: url("/img/icon/Git.png");
   background: url("/img/icon/Git.svg"), none;
@@ -100,7 +101,7 @@ a.nav-link:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -15px;
+  left: -35px;
   top: -5px;
   background: url("/img/icon/about.png");
   background: url("/img/icon/about.svg"), none;
