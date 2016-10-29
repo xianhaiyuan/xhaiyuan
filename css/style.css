@@ -16,6 +16,7 @@ body {
 
 .main {
   margin: 0 auto;
+  padding: 50px 80px;
   width: 86%;
   top: 35px;
   position: relative;
@@ -37,7 +38,9 @@ body {
 
 .page-title {
   margin: 1rem 0;
+  padding: 1.2rem;
   font-family: Lato,"Microsoft YaHei",sans-serif;
+  border-bottom: 8px solid #3399ff;
   font-size: 2.4rem;
   font-weight: 900;
   color: #bbb;
@@ -49,6 +52,7 @@ body {
 
 .nav-list {
   display: flex;
+  margin: 2rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -77,7 +81,7 @@ a.nav-link:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -35px;
+  left: -15px;
   top: -5px;
   background: url("/img/icon/home.png");
   background: url("/img/icon/home.svg"), none;
@@ -89,7 +93,7 @@ a.nav-link:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -35px;
+  left: -15px;
   top: -5px;
   background: url("/img/icon/Git.png");
   background: url("/img/icon/Git.svg"), none;
@@ -101,7 +105,7 @@ a.nav-link:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -35px;
+  left: -5px;
   top: -5px;
   background: url("/img/icon/about.png");
   background: url("/img/icon/about.svg"), none;
