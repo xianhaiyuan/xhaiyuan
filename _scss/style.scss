@@ -105,6 +105,9 @@ a.nav-link:hover{
 
 
  @include MQ(M) {
+  .main{
+    padding: 1rem 1.5rem;
+  }
   .page-title{
     font-size: 1.8rem;
   }
