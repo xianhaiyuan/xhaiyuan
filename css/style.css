@@ -175,6 +175,16 @@ a:focus {
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+  a.nav-link:visited:before {
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    transition: transform 1s ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 
   .nav-list li {
     margin-left: 0;

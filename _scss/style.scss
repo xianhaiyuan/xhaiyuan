@@ -129,6 +129,10 @@ a:focus{
       @include transition(transform 1s ease);
       @include transform(rotate(360deg));
     }
+    &:visited:before{
+      @include transition(transform 1s ease);
+      @include transform(rotate(360deg));
+    }
   }
   .nav-list li{
     margin-left: 0;
