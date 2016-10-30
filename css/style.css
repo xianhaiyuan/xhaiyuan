@@ -156,9 +156,9 @@ a:focus {
     width: 50px;
   }
   a.nav-link:hover:before {
-    -webkit-transition: -webkit-transform 0.2 0;
-    -moz-transition: -moz-transform 0.2 0;
-    transition: transform 0.2 0;
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    transition: transform 1s ease;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
@@ -166,9 +166,9 @@ a:focus {
     transform: rotate(360deg);
   }
   a.nav-link:focus:before {
-    -webkit-transition: -webkit-transform 0.2 0;
-    -moz-transition: -moz-transform 0.2 0;
-    transition: transform 0.2 0;
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    transition: transform 1s ease;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);

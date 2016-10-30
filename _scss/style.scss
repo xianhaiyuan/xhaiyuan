@@ -122,11 +122,11 @@ a:focus{
     overflow: hidden;
     width: 50px;
     &:hover:before{
-      @include transition(transform 0.2 0);
+      @include transition(transform 1s ease);
       @include transform(rotate(360deg));
     }
     &:focus:before{
-      @include transition(transform 0.2 0);
+      @include transition(transform 1s ease);
       @include transform(rotate(360deg));
     }
   }
