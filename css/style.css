@@ -8,6 +8,7 @@
 body {
   background-color: #E0F7FB;
   font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .center {
@@ -83,6 +84,16 @@ a.nav-link {
 
 a.nav-link:hover {
   text-decoration: underline;
+  outline: none;
+}
+
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+:focus {
+  outline: 0;
 }
 
 .home:before {

@@ -10,6 +10,7 @@
 body{
 	background-color: #E0F7FB;
 	font-family: $primary-font;
+  -webkit-tap-highlight-color:transparent;
 }
 .center{
 	text-align: center;
@@ -65,6 +66,14 @@ a.nav-link{
 }
 a.nav-link:hover{
   text-decoration: underline;
+  outline:none;
+}
+a:focus{
+  text-decoration:underline;
+  outline:none;
+}
+:focus{
+  outline:0;
 }
 .home:before{
   content: '';
