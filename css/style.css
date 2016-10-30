@@ -19,7 +19,7 @@ body {
   padding: 20px 50px;
 }
 
-.highlight {
+pre {
   line-height: 22px;
   margin: 15px auto;
   padding: 15px;
