@@ -19,6 +19,10 @@ body {
   padding: 20px 50px;
 }
 
+.highlight {
+  line-height: 22px;
+}
+
 .page-title {
   margin: 10px 0;
   padding: 20px;
@@ -147,7 +151,7 @@ a:focus {
   }
 
   .page-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   a.nav-link {
