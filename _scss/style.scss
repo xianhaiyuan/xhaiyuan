@@ -127,5 +127,12 @@ a:focus{
   }
   .home:before,.about:before,.git:before{
     left: 10px;
-  }
+    @include transition(transform 0.2 0);
+      &:hover{
+        @include transform(rotate(360deg));
+      }
+      &:focus{
+        @include transform(rotate(360deg));
+      }
+    }
  }

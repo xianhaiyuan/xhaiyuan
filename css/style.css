@@ -162,6 +162,23 @@ a:focus {
 
   .home:before, .about:before, .git:before {
     left: 10px;
+    -webkit-transition: -webkit-transform 0.2 0;
+    -moz-transition: -moz-transform 0.2 0;
+    transition: transform 0.2 0;
+  }
+  .home:before:hover, .about:before:hover, .git:before:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  .home:before:focus, .about:before:focus, .git:before:focus {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
