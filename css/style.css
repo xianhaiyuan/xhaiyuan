@@ -14,15 +14,20 @@ body {
   text-align: center;
 }
 
+.main {
+  width: 65%;
+  padding: 30px 80px;
+}
+
 .page-title {
   margin: 10px 0;
-  padding: 12px;
+  padding: 20px;
   font-size: 35px;
   font-weight: bold;
 }
 
 .nav-list {
-  margin: 20px;
+  margin: 25px;
 }
 
 .main {
