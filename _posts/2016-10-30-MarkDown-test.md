@@ -18,7 +18,20 @@ keyboard shortcuts.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-
+{% highlight js %}
+const config = require('./webpack.config')
+config.devServer = {
+    hot: true,
+    inline: true,
+    proxy: {
+        '/api/*': {
+            target: 'http://127.0.0.1:9999',
+            secure: false
+        }
+    }
+}
+module.exports = config
+{% endhighlight %}
 
 Give them a try:
 
