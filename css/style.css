@@ -21,6 +21,8 @@ body {
 
 .highlight {
   line-height: 22px;
+  margin: 15px auto;
+  padding: 15px;
 }
 
 .page-title {
