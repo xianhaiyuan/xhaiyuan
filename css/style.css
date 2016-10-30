@@ -159,15 +159,16 @@ a:focus {
     -webkit-transition: -webkit-transform 0.2 0;
     -moz-transition: -moz-transform 0.2 0;
     transition: transform 0.2 0;
-  }
-  a.nav-link:hover:before:hover {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-  a.nav-link:hover:before:focus {
+  a.nav-link:focus:before {
+    -webkit-transition: -webkit-transform 0.2 0;
+    -moz-transition: -moz-transform 0.2 0;
+    transition: transform 0.2 0;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);

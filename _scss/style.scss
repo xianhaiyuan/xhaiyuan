@@ -123,12 +123,11 @@ a:focus{
     width: 50px;
     &:hover:before{
       @include transition(transform 0.2 0);
-      &:hover{
-        @include transform(rotate(360deg));
-      }
-      &:focus{
-        @include transform(rotate(360deg));
-      }
+      @include transform(rotate(360deg));
+    }
+    &:focus:before{
+      @include transition(transform 0.2 0);
+      @include transform(rotate(360deg));
     }
   }
   .nav-list li{
