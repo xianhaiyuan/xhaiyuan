@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Markdown-test
 ---
 ## Welcome to MarkdownPad 2 ##
