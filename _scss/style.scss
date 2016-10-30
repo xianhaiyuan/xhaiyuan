@@ -8,7 +8,7 @@
 	@include box-sizing(border-box);
 }
 body{
-	background-color: #E0F7FB;
+	background-color: $color-1;
 	font-family: $primary-font;
   -webkit-tap-highlight-color:transparent;
 }
@@ -62,7 +62,7 @@ body{
 a.nav-link{
   text-decoration: none;
   width: 90px;
-  color: #504F4F;
+  color: $color-3;
   line-height: 1.2;
 }
 a.nav-link:hover{
