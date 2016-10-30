@@ -121,6 +121,8 @@ a:focus{
     text-indent: 100%;
     overflow: hidden;
     width: 50px;
+    @include transition(transform 1s ease);
+    @include transform(rotate(360deg));
     &:hover:before{
       @include transition(transform 1s ease);
       @include transform(rotate(360deg));
