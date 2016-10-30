@@ -140,60 +140,6 @@ a:focus {
   background: url("/img/icon/Git.svg"), none;
 }
 
-@media only screen and (max-width: 360px) {
-  .main {
-    padding: 1rem 1.5rem;
-  }
-
-  .page-title {
-    font-size: 1.5rem;
-  }
-
-  a.nav-link {
-    display: inline-block;
-    text-indent: 100%;
-    overflow: hidden;
-    width: 28px;
-  }
-  a.nav-link:hover:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  a.nav-link:focus:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  a.nav-link:visited:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-
-  .nav-list li {
-    margin-left: 10px;
-  }
-
-  .home:before, .about:before, .git:before {
-    left: -20px;
-  }
-}
 @media only screen and (max-width: 768px) {
   .main {
     padding: 10px 15px;
@@ -254,6 +200,60 @@ a:focus {
 
   .home:before, .about:before, .git:before {
     left: 0;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .main {
+    padding: 1rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  a.nav-link {
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden;
+    width: 28px;
+  }
+  a.nav-link:hover:before {
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    transition: transform 1s ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  a.nav-link:focus:before {
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    transition: transform 1s ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  a.nav-link:visited:before {
+    -webkit-transition: -webkit-transform 1s ease;
+    -moz-transition: -moz-transform 1s ease;
+    transition: transform 1s ease;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+
+  .nav-list li {
+    margin-left: 10px;
+  }
+
+  .home:before, .about:before, .git:before {
+    left: -20px;
   }
 }
 /* RESET

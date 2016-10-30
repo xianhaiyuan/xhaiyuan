@@ -110,38 +110,6 @@ a:focus{
   background:url('/img/icon/Git.png');
   background:url('/img/icon/Git.svg'),none;
 }
-   @include MQ(S) {
-    .main{
-      padding: 1rem 1.5rem;
-    }
-    .page-title{
-      font-size: 1.5rem;
-    }
-    a.nav-link{
-      display: inline-block;
-      text-indent: 100%;
-      overflow: hidden;
-      width: 28px;
-      &:hover:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
-      }
-      &:focus:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
-      }
-      &:visited:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
-      }
-    }
-    .nav-list li{
-      margin-left: 10px;
-    }
-    .home:before,.about:before,.git:before{
-      left: -20px;
-      }
-   }
    @include MQ(M) {
     @include ployfill-ie7-M;
     .main{
@@ -173,6 +141,39 @@ a:focus{
     }
     .home:before,.about:before,.git:before{
       left: 0;
+      }
+   }
+
+   @include MQ(S) {
+    .main{
+      padding: 1rem 1.5rem;
+    }
+    .page-title{
+      font-size: 1.5rem;
+    }
+    a.nav-link{
+      display: inline-block;
+      text-indent: 100%;
+      overflow: hidden;
+      width: 28px;
+      &:hover:before{
+        @include transition(transform 1s ease);
+        @include transform(rotate(360deg));
+      }
+      &:focus:before{
+        @include transition(transform 1s ease);
+        @include transform(rotate(360deg));
+      }
+      &:visited:before{
+        @include transition(transform 1s ease);
+        @include transform(rotate(360deg));
+      }
+    }
+    .nav-list li{
+      margin-left: 10px;
+    }
+    .home:before,.about:before,.git:before{
+      left: -20px;
       }
    }
  }
