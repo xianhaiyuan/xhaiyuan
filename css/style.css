@@ -142,6 +142,7 @@ a.nav-link:hover {
     display: inline-block;
     text-indent: 100%;
     overflow: hidden;
+    width: 50px;
   }
 
   .nav-list li {
