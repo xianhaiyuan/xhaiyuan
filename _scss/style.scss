@@ -121,18 +121,20 @@ a:focus{
     text-indent: 100%;
     overflow: hidden;
     width: 50px;
-  }
-  .nav-list li{
-    margin-left: 0;
-  }
-  .home:before,.about:before,.git:before{
-    left: 10px;
-    @include transition(transform 0.2 0);
+    &:hover:before{
+      @include transition(transform 0.2 0);
       &:hover{
         @include transform(rotate(360deg));
       }
       &:focus{
         @include transform(rotate(360deg));
       }
+    }
+  }
+  .nav-list li{
+    margin-left: 0;
+  }
+  .home:before,.about:before,.git:before{
+    left: 10px;
     }
  }
