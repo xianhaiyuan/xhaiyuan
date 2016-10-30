@@ -154,9 +154,9 @@ a:focus {
     text-indent: 100%;
     overflow: hidden;
     width: 50px;
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
+    -webkit-transition: -webkit-transform 1s 3s ease;
+    -moz-transition: -moz-transform 1s 3s ease;
+    transition: transform 1s 3s ease;
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
