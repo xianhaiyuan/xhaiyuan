@@ -139,7 +139,7 @@ a:focus {
     display: inline-block;
     text-indent: 100%;
     overflow: hidden;
-    width: 50px;
+    width: 1px;
   }
   a.nav-link:hover:before {
     -webkit-transition: -webkit-transform 1s ease;
@@ -173,11 +173,11 @@ a:focus {
   }
 
   .nav-list li.about {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 
   .home:before, .about:before, .git:before {
-    left: -5px;
+    left: 0;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -193,7 +193,7 @@ a:focus {
     display: inline-block;
     text-indent: 100%;
     overflow: hidden;
-    width: 28px;
+    width: 1px;
   }
   a.nav-link:hover:before {
     -webkit-transition: -webkit-transform 1s ease;
@@ -227,11 +227,11 @@ a:focus {
   }
 
   .nav-list li.about {
-    margin: 0 10px;
+    margin: 0 15px;
   }
 
   .home:before, .about:before, .git:before {
-    left: -20px;
+    left: 0;
   }
 }
 /* RESET

@@ -127,7 +127,7 @@ a:focus{
       display: inline-block;
       text-indent: 100%;
       overflow: hidden;
-      width: 50px;
+      width: 1px;
       &:hover:before{
         @include transition(transform 1s ease);
         @include transform(rotate(360deg));
@@ -142,10 +142,10 @@ a:focus{
       }
     }
     .nav-list li.about{
-      margin: 0 10px;
+      margin: 0 20px;
     }
     .home:before,.about:before,.git:before{
-      left: -5px;
+      left: 0;
       }
    }
 
@@ -160,7 +160,7 @@ a:focus{
       display: inline-block;
       text-indent: 100%;
       overflow: hidden;
-      width: 28px;
+      width: 1px;
       &:hover:before{
         @include transition(transform 1s ease);
         @include transform(rotate(360deg));
@@ -175,10 +175,10 @@ a:focus{
       }
     }
     .nav-list li.about{
-      margin: 0 10px;
+      margin: 0 15px;
     }
     .home:before,.about:before,.git:before{
-      left: -20px;
+      left: 0;
       }
    }
  }
