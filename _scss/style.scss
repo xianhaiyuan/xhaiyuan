@@ -62,9 +62,9 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-  }
-  &.about{
-    margin: 0 30px;
+      &.about{
+      margin: 0 30px;
+    }
   }
 }
 a.nav-link{

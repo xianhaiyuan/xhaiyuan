@@ -65,7 +65,7 @@ body {
   align-items: center;
   position: relative;
 }
-.nav-list.about {
+.nav-list li.about {
   margin: 0 30px;
 }
 
