@@ -176,7 +176,7 @@ a:focus {
     margin: 0 20px;
   }
 
-  .home:before, .about:before, .git:before {
+  .home a:before, .about a:before, .git a:before {
     left: 0;
   }
 }
@@ -230,7 +230,7 @@ a:focus {
     margin: 0 15px;
   }
 
-  .home:before, .about:before, .git:before {
+  .home a:before, .about a:before, .git a:before {
     left: 0;
   }
 }
