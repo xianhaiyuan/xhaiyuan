@@ -83,7 +83,7 @@ a:focus{
 :focus{
   outline:0;
 }
-.home:before{
+.home a:before{
   content: '';
   display: block;
   width: 30px;
@@ -93,7 +93,7 @@ a:focus{
   background:url('/img/icon/home.png');
   background:url('/img/icon/home.svg'),none;
 }
-.about:before{
+.about a:before{
   content: '';
   display: block;
   width: 30px;
@@ -103,7 +103,7 @@ a:focus{
   background:url('/img/icon/about.png');
   background:url('/img/icon/about.svg'),none;
 }
-.git:before{
+.git a:before{
   content: '';
   display: block;
   width: 30px;
@@ -113,7 +113,7 @@ a:focus{
   background:url('/img/icon/Git.png');
   background:url('/img/icon/Git.svg'),none;
 }
-.git:before,.about:before,.home:before{
+.git a:before,.about a:before,.home a:before{
   left: -15px;
 }
    @include MQ(M) {
