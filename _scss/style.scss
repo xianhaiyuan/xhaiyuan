@@ -141,8 +141,8 @@ a:focus{
         @include transform(rotate(360deg));
       }
     }
-    .nav-list li{
-      margin-left: 0;
+    .nav-list li.about{
+      margin: 0 10px;
     }
     .home:before,.about:before,.git:before{
       left: -5px;
@@ -174,8 +174,8 @@ a:focus{
         @include transform(rotate(360deg));
       }
     }
-    .nav-list li{
-      margin-left: 10px;
+    .nav-list li.about{
+      margin: 0 10px;
     }
     .home:before,.about:before,.git:before{
       left: -20px;
