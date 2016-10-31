@@ -43,7 +43,7 @@ body {
   padding: 1.2rem;
   font-family: Lato, "Microsoft YaHei", sans-serif;
   border-bottom: 8px solid #3399ff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #bbb;
 }
@@ -53,35 +53,37 @@ body {
 }
 
 .nav-list {
-  margin: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.8rem;
 }
 .nav-list li {
   display: flex;
-  width: 90px;
+  width: 25%;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.nav-list li.about {
-  margin: 0 30px;
+.nav-list img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 a.nav-link {
   text-decoration: none;
   color: #504F4F;
   line-height: 1.2;
+  padding: 0 5px;
 }
 
 a.nav-link:hover {
-  text-decoration: underline;
   outline: none;
+  text-decoration: none;
 }
 
 a:focus {
-  text-decoration: underline;
   outline: none;
 }
 
@@ -89,149 +91,139 @@ a:focus {
   outline: 0;
 }
 
-.home a:before {
-  content: '';
-  display: block;
-  width: 30px;
+.border_bottom {
+  display: inline-block;
+  border-bottom: 4px solid transparent;
   height: 30px;
+  left: 42%;
   position: absolute;
-  top: -5px;
-  background: url("/img/icon/home.png");
-  background: url("/img/icon/home.svg"), none;
+  top: 0;
+  width: 58px;
+  -webkit-transform: translateX(30%);
+  -moz-transform: translateX(30%);
+  -ms-transform: translateX(30%);
+  -o-transform: translateX(30%);
+  transform: translateX(30%);
 }
 
-.about a:before {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  background: url("/img/icon/about.png");
-  background: url("/img/icon/about.svg"), none;
+.border_bottom:hover {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  border-bottom: 4px solid #7fbffa;
+  -webkit-animation: linkanim 0.8s ease;
+  -moz-animation: linkanim 0.8s ease;
+  animation: linkanim 0.8s ease;
 }
 
-.git a:before {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  background: url("/img/icon/Git.png");
-  background: url("/img/icon/Git.svg"), none;
+@-webkit-keyframes linkanim {
+  0% {
+    -webkit-transform: translateX(30%);
+    border-bottom: 4px solid transparent;
+  }
+  66% {
+    -webkit-transform: translateX(-15%);
+    border-bottom: 4px solid #7fbffa;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    border-bottom: 4px solid #7fbffa;
+  }
 }
-
-.git a:before, .about a:before, .home a:before {
-  left: -15px;
+@-moz-keyframes linkanim {
+  0% {
+    -moz-transform: translateX(30%);
+    border-bottom: 4px solid transparent;
+  }
+  66% {
+    -moz-transform: translateX(-15%);
+    border-bottom: 4px solid #7fbffa;
+  }
+  100% {
+    -moz-transform: translateX(0);
+    border-bottom: 4px solid #7fbffa;
+  }
 }
+@keyframes linkanim {
+  0% {
+    -webkit-transform: translateX(30%);
+    -moz-transform: translateX(30%);
+    -ms-transform: translateX(30%);
+    -o-transform: translateX(30%);
+    transform: translateX(30%);
+    border-bottom: 4px solid transparent;
+  }
+  66% {
+    -webkit-transform: translateX(-15%);
+    -moz-transform: translateX(-15%);
+    -ms-transform: translateX(-15%);
+    -o-transform: translateX(-15%);
+    transform: translateX(-15%);
+    border-bottom: 4px solid #7fbffa;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    border-bottom: 4px solid #7fbffa;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .page-title {
+    font-size: 2.0rem;
+  }
 
-@media only screen and (max-width: 768px) {
+  .border_bottom {
+    left: 39%;
+  }
+}
+@media only screen and (max-width: 860px) {
+  .main {
+    padding: 1rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .border_bottom {
+    display: none;
+  }
+
+  .nav-list a {
+    width: 30px;
+    height: 30px;
+  }
+  .nav-list a:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: -webkit-transform 0.8s ease;
+    -moz-transition: -moz-transform 0.8s ease;
+    transition: transform 0.8s ease;
+  }
+
+  .border_bottom {
+    left: 36%;
+  }
+}
+@media only screen and (max-width: 600px) {
   .main {
     padding: 1rem 1.5rem;
   }
 
   .page-title {
     font-size: 1.5rem;
-  }
-
-  a.nav-link {
-    display: inline-block;
-    text-indent: 100%;
-    overflow: hidden;
-    width: 1px;
-  }
-  a.nav-link:hover:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  a.nav-link:focus:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  a.nav-link:visited:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-
-  .nav-list li.about {
-    margin: 0 20px;
-  }
-
-  .home a:before, .about a:before, .git a:before {
-    left: 0;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .main {
-    padding: 1rem 1.5rem;
-  }
-
-  .page-title {
-    font-size: 1.5rem;
-  }
-
-  a.nav-link {
-    display: inline-block;
-    text-indent: 100%;
-    overflow: hidden;
-    width: 1px;
-  }
-  a.nav-link:hover:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  a.nav-link:focus:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  a.nav-link:visited:before {
-    -webkit-transition: -webkit-transform 1s ease;
-    -moz-transition: -moz-transform 1s ease;
-    transition: transform 1s ease;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-
-  .nav-list li.about {
-    margin: 0 15px;
-  }
-
-  .home a:before, .about a:before, .git a:before {
-    left: 0;
   }
 }
 /* RESET

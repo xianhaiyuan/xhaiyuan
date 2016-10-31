@@ -43,7 +43,7 @@ body{
   padding: 1.2rem;
   font-family: $secondary-font;
   border-bottom: 8px solid #3399ff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #bbb;
 
@@ -52,101 +52,105 @@ body{
   list-style: none;
 }
 .nav-list{
-  margin: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.8rem;
   li{
     display: flex;
-    width: 90px;
+    width: 25%;
     justify-content: center;
     align-items: center;
     position: relative;
-      &.about{
-      margin: 0 30px;
-    }
+  }
+  img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
 }
 a.nav-link{
   text-decoration: none;
   color: $color-3;
   line-height: 1.2;
+  padding: 0 5px;
 }
 a.nav-link:hover{
-  text-decoration: underline;
   outline:none;
+  text-decoration: none;
 }
 a:focus{
-  text-decoration:underline;
   outline:none;
 }
 :focus{
   outline:0;
 }
-.home a:before{
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  background:url('/img/icon/home.png');
-  background:url('/img/icon/home.svg'),none;
-}
-.about a:before{
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  background:url('/img/icon/about.png');
-  background:url('/img/icon/about.svg'),none;
-}
-.git a:before{
-  content: '';
-  display: block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  background:url('/img/icon/Git.png');
-  background:url('/img/icon/Git.svg'),none;
-}
-.git a:before,.about a:before,.home a:before{
-  left: -15px;
-}
+.border_bottom{
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+    height: 30px;
+    left: 42%;
+    position: absolute;
+    top: 0;
+    width: 58px;
+    //@include transition(all 1s ease);
+    @include transform(translateX(30%));
+  }
+  .border_bottom:hover{
+    @include transform(translateX(0));
+    border-bottom: 4px solid $color-5;
+    @include animation(linkanim .8s ease);
+  }
+
+  @include keyframes(linkanim) {
+    0% {
+      @include transform(translateX(30%));
+      border-bottom: 4px solid transparent;
+    }
+    66% {
+      @include transform(translateX(-15%));
+      border-bottom: 4px solid $color-5;
+    }
+    100% {
+      @include transform(translateX(0));
+      border-bottom: 4px solid $color-5;
+    }
+  }
+
+   @include MQ(L) {
+    .page-title{
+      font-size: 2.0rem;
+    }
+    .border_bottom{
+      left: 39%;
+    }
+   }
    @include MQ(M) {
     .main{
       padding: 1rem 1.5rem;
     }
     .page-title{
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
-    a.nav-link{
-      display: inline-block;
-      text-indent: 100%;
-      overflow: hidden;
-      width: 1px;
-      &:hover:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
+    .nav-link{
+      display: none;
+    }
+    .border_bottom{
+      display: none;
+    }
+    .nav-list{
+      a{
+        width: 30px;
+        height: 30px;
       }
-      &:focus:before{
-        @include transition(transform 1s ease);
+      a:hover{
         @include transform(rotate(360deg));
-      }
-      &:visited:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
+        @include transition(transform .8s ease);
       }
     }
-    .nav-list li.about{
-      margin: 0 20px;
+    .border_bottom{
+      left: 36%;
     }
-    .home a:before,.about a:before,.git a:before{
-      left: 0;
-      }
    }
 
    @include MQ(S) {
@@ -156,32 +160,8 @@ a:focus{
     .page-title{
       font-size: 1.5rem;
     }
-    a.nav-link{
-      display: inline-block;
-      text-indent: 100%;
-      overflow: hidden;
-      width: 1px;
-      &:hover:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
-      }
-      &:focus:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
-      }
-      &:visited:before{
-        @include transition(transform 1s ease);
-        @include transform(rotate(360deg));
-      }
-    }
-    .nav-list li.about{
-      margin: 0 15px;
-    }
-    .home a:before,.about a:before,.git a:before{
-      left: 0;
-      }
-   }
  }
+}
  
 
 @mixin my_page--post(){
