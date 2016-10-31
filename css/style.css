@@ -93,7 +93,6 @@ a:focus {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -35px;
   top: -5px;
   background: url("/img/icon/home.png");
   background: url("/img/icon/home.svg"), none;
@@ -105,7 +104,6 @@ a:focus {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -35px;
   top: -5px;
   background: url("/img/icon/about.png");
   background: url("/img/icon/about.svg"), none;
@@ -117,10 +115,13 @@ a:focus {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: -35px;
   top: -5px;
   background: url("/img/icon/Git.png");
   background: url("/img/icon/Git.svg"), none;
+}
+
+.git:before, .about:before, .home:before {
+  left: -15px;
 }
 
 @media only screen and (max-width: 768px) {
