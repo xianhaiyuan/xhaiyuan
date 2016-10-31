@@ -16,7 +16,6 @@ body{
 .center{
   text-align: center;
 }
-@include ployfill-ie7;
 .main {
   margin: 15px auto;
   padding: 1.2rem 5rem;
@@ -54,8 +53,13 @@ body{
 }
 .nav-list{
   margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   li{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin-left: 50px;
   }
@@ -111,7 +115,6 @@ a:focus{
   background:url('/img/icon/Git.svg'),none;
 }
    @include MQ(M) {
-    @include ployfill-ie7-M;
     .main{
       padding: 1rem 1.5rem;
     }
@@ -140,7 +143,7 @@ a:focus{
       margin-left: 0;
     }
     .home:before,.about:before,.git:before{
-      left: 0;
+      left: -5px;
       }
    }
 
