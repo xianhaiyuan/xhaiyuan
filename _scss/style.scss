@@ -58,17 +58,17 @@ body{
   align-items: center;
   li{
     display: flex;
+    width: 90px;
     justify-content: center;
     align-items: center;
     position: relative;
   }
   &.about{
-    margin: 0 20px;
+    margin: 0 30px;
   }
 }
 a.nav-link{
   text-decoration: none;
-  width: 90px;
   color: $color-3;
   line-height: 1.2;
 }

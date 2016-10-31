@@ -60,17 +60,17 @@ body {
 }
 .nav-list li {
   display: flex;
+  width: 90px;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 .nav-list.about {
-  margin: 0 20px;
+  margin: 0 30px;
 }
 
 a.nav-link {
   text-decoration: none;
-  width: 90px;
   color: #504F4F;
   line-height: 1.2;
 }
