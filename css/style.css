@@ -63,7 +63,9 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-left: 50px;
+}
+.nav-list.about {
+  margin: 0 20px;
 }
 
 a.nav-link {
