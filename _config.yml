@@ -7,10 +7,7 @@ paginate_path: "/page:num/"
 baseurl: /
 exclude: ['node_modules', '_site']
 gems:
-  - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-feed
-  - jemoji
 defaults:
   -
     values:
