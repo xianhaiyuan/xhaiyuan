@@ -80,6 +80,7 @@ body {
 }
 
 a.nav-link {
+  position: relative;
   text-decoration: none;
   color: #504F4F;
   line-height: 1.2;
@@ -102,11 +103,11 @@ a:focus {
 .border_bottom {
   display: inline-block;
   border-bottom: 4px solid transparent;
-  height: 30px;
-  left: 42%;
+  height: 125%;
+  left: 0;
   position: absolute;
   top: 0;
-  width: 58px;
+  width: 100%;
   -webkit-transform: translateX(30%);
   -moz-transform: translateX(30%);
   -ms-transform: translateX(30%);
@@ -216,10 +217,6 @@ a:focus {
   .page-title {
     font-size: 2.0rem;
   }
-
-  .border_bottom {
-    left: 39%;
-  }
 }
 @media only screen and (max-width: 860px) {
   .main {
@@ -251,10 +248,6 @@ a:focus {
     -webkit-transition: -webkit-transform 0.8s ease;
     -moz-transition: -moz-transform 0.8s ease;
     transition: transform 0.8s ease;
-  }
-
-  .border_bottom {
-    left: 36%;
   }
 }
 @media only screen and (max-width: 600px) {

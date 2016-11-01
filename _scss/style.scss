@@ -78,6 +78,7 @@ body{
   }
 }
 a.nav-link{
+  position: relative;
   text-decoration: none;
   color: $color-3;
   line-height: 1.2;
@@ -96,12 +97,11 @@ a:focus{
 .border_bottom{
     display: inline-block;
     border-bottom: 4px solid transparent;
-    height: 30px;
-    left: 42%;
+    height: 125%;
+    left: 0;
     position: absolute;
     top: 0;
-    width: 58px;
-    //@include transition(all 1s ease);
+    width: 100%;
     @include transform(translateX(30%));
   }
   .border_bottom:hover{
@@ -137,9 +137,6 @@ a:focus{
     .page-title{
       font-size: 2.0rem;
     }
-    .border_bottom{
-      left: 39%;
-    }
    }
    @include MQ(M) {
     .main{
@@ -163,9 +160,6 @@ a:focus{
         @include transform(rotate(360deg));
         @include transition(transform .8s ease);
       }
-    }
-    .border_bottom{
-      left: 36%;
     }
    }
 
