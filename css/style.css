@@ -54,7 +54,7 @@ body {
 
 .nav-list {
   display: -webkit-box;
-  -webkit-justify-content: center;
+  -webkit-justify-content: space-between;
   -webkit-align-items: center;
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@ body {
 }
 .nav-list li {
   display: -webkit-box;
-  -webkit-justify-content: center;
+  -webkit-justify-content: space-between;
   -webkit-align-items: center;
   display: flex;
   width: 25%;
