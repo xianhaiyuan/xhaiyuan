@@ -37,7 +37,6 @@ body{
   bottom: 100%;
   background-image: linear-gradient(1deg, white, 50%, transparent 50%);
 }
-
 .page-title{
   margin: 1rem 0;
   padding: 1.2rem;
@@ -46,7 +45,6 @@ body{
   font-size: 2.2rem;
   font-weight: 900;
   color: #bbb;
-
  }
 .list-nostyled{
   list-style: none;
@@ -94,7 +92,55 @@ a:focus{
 :focus{
   outline:0;
 }
-.border_bottom{
+.page_container{
+  .blog_title{
+    position: relative;
+    height: 30px;
+    margin: 20px 0;
+    background:url('/img/icon/triangle.png') no-repeat;
+    background:url('/img/icon/triangle.svg') no-repeat,none;
+    background-position: -12px 0;
+    line-height: 30px;
+    text-indent: 40px;
+  }
+  span{
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-indent: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  ul,li{
+    padding: 0;
+    margin: 0;
+  }
+  .post_time{
+    padding: 1rem;
+    color: #777;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+  }
+    a.page__link{
+    color: #6594c1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+      &:hover + div {
+        background-color: #444; 
+        top: 0;
+        @include animation(page_triangle_active 1s ease);
+      }
+  }
+  .border_left_active{
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: -10px;
+    left: 0;
+    background-color: transparent; 
+  }
+}
+  .border_bottom_active{
     display: inline-block;
     border-bottom: 4px solid transparent;
     height: 125%;
@@ -104,13 +150,18 @@ a:focus{
     width: 100%;
     @include transform(translateX(30%));
   }
-  .border_bottom:hover{
+  .nav-link:hover div{
     @include transform(translateX(0));
     border-bottom: 4px solid $color-5;
-    @include animation(linkanim 1s ease);
+    @include animation(nav_link_active 1s ease);
+  }
+  .nav-icon:hover+a div{
+    @include transform(translateX(0));
+    border-bottom: 4px solid $color-5;
+    @include animation(nav_link_active 1s ease);
   }
 
-  @include keyframes(linkanim) {
+  @include keyframes(nav_link_active) {
     0% {
       @include transform(translateX(30%));
       border-bottom: 4px solid transparent;
@@ -133,6 +184,41 @@ a:focus{
     }
   }
 
+  @include keyframes(page_triangle_active) {
+    0% {
+      top: -10px;
+      background-color: transparent;
+    }
+    26% {
+      top: 0px;
+      background-color: #444;
+    }
+    47% {
+      top: -8px;
+      background-color: #444;
+    }
+    68%{
+      top: 0px;
+      background-color: #444;
+    }
+    78%{
+      top: -4px;
+      background-color: #444;
+    }
+    88%{
+      top: 0px;
+      background-color: #444;
+    }
+    93%{
+      top: -2px;
+      background-color: #444;
+    }
+    100%{
+      top: 0px;
+      background-color: #444;
+    }
+  }
+
    @include MQ(L) {
     .page-title{
       font-size: 2.0rem;
@@ -148,7 +234,7 @@ a:focus{
     .nav-link{
       display: none;
     }
-    .border_bottom{
+    .border_bottom_active{
       display: none;
     }
     .nav-list{

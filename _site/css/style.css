@@ -100,7 +100,56 @@ a:focus {
   outline: 0;
 }
 
-.border_bottom {
+.page_container .blog_title {
+  position: relative;
+  height: 30px;
+  margin: 20px 0;
+  background: url("/img/icon/triangle.png") no-repeat;
+  background: url("/img/icon/triangle.svg") no-repeat, none;
+  background-position: -12px 0;
+  line-height: 30px;
+  text-indent: 40px;
+}
+.page_container span {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-indent: 2rem;
+  margin-bottom: 0.8rem;
+}
+.page_container ul, .page_container li {
+  padding: 0;
+  margin: 0;
+}
+.page_container .post_time {
+  padding: 1rem;
+  color: #777;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+}
+.page_container a.page__link {
+  color: #6594c1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.page_container a.page__link:hover + div {
+  background-color: #444;
+  top: 0;
+  -webkit-animation: page_triangle_active 1s ease;
+  -moz-animation: page_triangle_active 1s ease;
+  animation: page_triangle_active 1s ease;
+}
+.page_container .border_left_active {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: -10px;
+  left: 0;
+  background-color: transparent;
+}
+
+.border_bottom_active {
   display: inline-block;
   border-bottom: 4px solid transparent;
   height: 125%;
@@ -115,19 +164,31 @@ a:focus {
   transform: translateX(30%);
 }
 
-.border_bottom:hover {
+.nav-link:hover div {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
   border-bottom: 4px solid #7fbffa;
-  -webkit-animation: linkanim 1s ease;
-  -moz-animation: linkanim 1s ease;
-  animation: linkanim 1s ease;
+  -webkit-animation: nav_link_active 1s ease;
+  -moz-animation: nav_link_active 1s ease;
+  animation: nav_link_active 1s ease;
 }
 
-@-webkit-keyframes linkanim {
+.nav-icon:hover + a div {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  border-bottom: 4px solid #7fbffa;
+  -webkit-animation: nav_link_active 1s ease;
+  -moz-animation: nav_link_active 1s ease;
+  animation: nav_link_active 1s ease;
+}
+
+@-webkit-keyframes nav_link_active {
   0% {
     -webkit-transform: translateX(30%);
     border-bottom: 4px solid transparent;
@@ -149,7 +210,7 @@ a:focus {
     border-bottom: 4px solid #7fbffa;
   }
 }
-@-moz-keyframes linkanim {
+@-moz-keyframes nav_link_active {
   0% {
     -moz-transform: translateX(30%);
     border-bottom: 4px solid transparent;
@@ -171,7 +232,7 @@ a:focus {
     border-bottom: 4px solid #7fbffa;
   }
 }
-@keyframes linkanim {
+@keyframes nav_link_active {
   0% {
     -webkit-transform: translateX(30%);
     -moz-transform: translateX(30%);
@@ -213,6 +274,108 @@ a:focus {
     border-bottom: 4px solid #7fbffa;
   }
 }
+@-webkit-keyframes page_triangle_active {
+  0% {
+    top: -10px;
+    background-color: transparent;
+  }
+  26% {
+    top: 0px;
+    background-color: #444;
+  }
+  47% {
+    top: -8px;
+    background-color: #444;
+  }
+  68% {
+    top: 0px;
+    background-color: #444;
+  }
+  78% {
+    top: -4px;
+    background-color: #444;
+  }
+  88% {
+    top: 0px;
+    background-color: #444;
+  }
+  93% {
+    top: -2px;
+    background-color: #444;
+  }
+  100% {
+    top: 0px;
+    background-color: #444;
+  }
+}
+@-moz-keyframes page_triangle_active {
+  0% {
+    top: -10px;
+    background-color: transparent;
+  }
+  26% {
+    top: 0px;
+    background-color: #444;
+  }
+  47% {
+    top: -8px;
+    background-color: #444;
+  }
+  68% {
+    top: 0px;
+    background-color: #444;
+  }
+  78% {
+    top: -4px;
+    background-color: #444;
+  }
+  88% {
+    top: 0px;
+    background-color: #444;
+  }
+  93% {
+    top: -2px;
+    background-color: #444;
+  }
+  100% {
+    top: 0px;
+    background-color: #444;
+  }
+}
+@keyframes page_triangle_active {
+  0% {
+    top: -10px;
+    background-color: transparent;
+  }
+  26% {
+    top: 0px;
+    background-color: #444;
+  }
+  47% {
+    top: -8px;
+    background-color: #444;
+  }
+  68% {
+    top: 0px;
+    background-color: #444;
+  }
+  78% {
+    top: -4px;
+    background-color: #444;
+  }
+  88% {
+    top: 0px;
+    background-color: #444;
+  }
+  93% {
+    top: -2px;
+    background-color: #444;
+  }
+  100% {
+    top: 0px;
+    background-color: #444;
+  }
+}
 @media only screen and (max-width: 1000px) {
   .page-title {
     font-size: 2.0rem;
@@ -231,7 +394,7 @@ a:focus {
     display: none;
   }
 
-  .border_bottom {
+  .border_bottom_active {
     display: none;
   }
 

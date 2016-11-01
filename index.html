@@ -4,12 +4,16 @@ title: 白色风车
 ---
 
 {% for post in paginator.posts %}
-<tr>
-	<td>
-        <a href="{{ post.url }}" class="page__link">{{ post.title }}</a>
-    </td>
-	<td>
-        {{ post.date|date_to_string }}
-    </td>
-</tr>
+	<div class="page_container">
+		<ul>
+			<li>
+				<div class="blog_title">
+					<a href="{{ post.url }}" class="page__link">{{ post.title }}</a>
+					<div class="border_left_active"></div>
+				</div>
+				<span>{{ post.excerpt }}</span>
+				<div class="post_time">posted @ {{ post.time }}</div>
+			</li>
+		</ul>
+	</div>
 {% endfor %}
