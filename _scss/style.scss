@@ -52,18 +52,24 @@ body{
   list-style: none;
 }
 .nav-list{
+  display: -webkit-box;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
   li{
+    display: -webkit-box;
+    -webkit-justify-content: center;
+   -webkit-align-items: center;
     display: flex;
     width: 25%;
     justify-content: center;
     align-items: center;
     position: relative;
   }
-  img{
+  image{
     width: 30px;
     height: 30px;
     cursor: pointer;

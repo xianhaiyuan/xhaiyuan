@@ -43,7 +43,7 @@ body {
   padding: 1.2rem;
   font-family: Lato, "Microsoft YaHei", sans-serif;
   border-bottom: 8px solid #3399ff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #bbb;
 }
@@ -53,19 +53,25 @@ body {
 }
 
 .nav-list {
+  display: -webkit-box;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
 }
 .nav-list li {
+  display: -webkit-box;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
   display: flex;
   width: 25%;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.nav-list img {
+.nav-list image {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -173,6 +179,10 @@ a:focus {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .page-title {
+    font-size: 2.0rem;
+  }
+
   .border_bottom {
     left: 39%;
   }
@@ -183,7 +193,7 @@ a:focus {
   }
 
   .page-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .nav-link {
