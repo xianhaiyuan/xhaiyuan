@@ -55,6 +55,8 @@ body {
 .nav-list {
   display: -webkit-box;
   -webkit-box-flex: 1;
+  -webkit-box-pack: center;
+  box-pack: center;
   display: flex;
   justify-content: center;
   align-items: center;
