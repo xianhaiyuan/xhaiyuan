@@ -100,31 +100,38 @@ a:focus {
   outline: 0;
 }
 
+.page_container ul, .page_container li {
+  padding: 0;
+  margin: 0;
+}
 .page_container .blog_title {
   position: relative;
   height: 30px;
-  margin: 20px 0;
   background: url("/img/icon/triangle.png") no-repeat;
   background: url("/img/icon/triangle.svg") no-repeat, none;
   background-position: -12px 0;
   line-height: 30px;
   text-indent: 40px;
+  display: inline-block;
+}
+.page_container li {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 .page_container span {
   display: inline-block;
+  width: 100%;
   font-size: 1rem;
   line-height: 1.5;
   text-indent: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
-}
-.page_container ul, .page_container li {
-  padding: 0;
-  margin: 0;
 }
 .page_container .post_time {
   padding: 1rem;
   color: #777;
   text-align: right;
+  line-height: 1.5;
   border-bottom: 1px solid #ddd;
 }
 .page_container a.page__link {
@@ -380,6 +387,10 @@ a:focus {
   .page-title {
     font-size: 2.0rem;
   }
+
+  .page_container a.page__link {
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 860px) {
   .main {
@@ -411,6 +422,10 @@ a:focus {
     -webkit-transition: -webkit-transform 0.8s ease;
     -moz-transition: -moz-transform 0.8s ease;
     transition: transform 0.8s ease;
+  }
+
+  .page_container a.page__link {
+    font-size: 1.3rem;
   }
 }
 @media only screen and (max-width: 600px) {
