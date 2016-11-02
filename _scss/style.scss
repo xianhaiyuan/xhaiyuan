@@ -117,7 +117,7 @@ a:focus{
     display: inline-block;
     width: 100%;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.8;
     text-indent: 2rem;
     margin-top: 1rem;
     margin-bottom: 0.8rem;
@@ -129,11 +129,14 @@ a:focus{
     line-height: 1.5;
     border-bottom: 1px solid #ddd;
   }
-    a.page__link{
+    a.page_link{
     color: #6594c1;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
+      &:hover{
+        color: #3399FF;
+      }
       &:hover + div {
         background-color: #444; 
         top: 0;
@@ -159,16 +162,58 @@ a:focus{
     width: 100%;
     @include transform(translateX(30%));
   }
-  .nav-link:hover div{
+  .link-active:hover div{
     @include transform(translateX(0));
     border-bottom: 4px solid $color-5;
     @include animation(nav_link_active 1s ease);
   }
-  .nav-icon:hover+a div{
+  .icon-active:hover+a div{
     @include transform(translateX(0));
     border-bottom: 4px solid $color-5;
     @include animation(nav_link_active 1s ease);
   }
+
+  .pagination{
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  .previous,.next{
+    position: relative;
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+  #footer{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    text-align: center;
+  }
+
+  .icon-footer{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    &:hover{
+      @include transform(rotate(360deg));
+      @include transition(transform .8s ease);
+    }
+    &.git{
+    background-image: url('/img/icon/Git.png');
+    background-image: url('/img/icon/Git.svg') none;
+   }
+    &.sina{
+    background-image: url('/img/icon/sina.png');
+    background-image: url('/img/icon/sina.svg') none;
+   }
+  }
+
 
   @include keyframes(nav_link_active) {
     0% {
@@ -245,9 +290,9 @@ a:focus{
     }
     .nav-link{
       display: none;
-    }
-    .border_bottom_active{
-      display: none;
+       & .border_bottom_active{
+        display: none;
+      }
     }
     .nav-list{
       a{

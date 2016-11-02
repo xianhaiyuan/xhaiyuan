@@ -122,7 +122,7 @@ a:focus {
   display: inline-block;
   width: 100%;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.8;
   text-indent: 2rem;
   margin-top: 1rem;
   margin-bottom: 0.8rem;
@@ -131,15 +131,19 @@ a:focus {
   padding: 1rem;
   color: #777;
   text-align: right;
+  line-height: 1.5;
   border-bottom: 1px solid #ddd;
 }
-.page_container a.page__link {
+.page_container a.page_link {
   color: #6594c1;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
 }
-.page_container a.page__link:hover + div {
+.page_container a.page_link:hover {
+  color: #3399FF;
+}
+.page_container a.page_link:hover + div {
   background-color: #444;
   top: 0;
   -webkit-animation: page_triangle_active 1s ease;
@@ -170,7 +174,7 @@ a:focus {
   transform: translateX(30%);
 }
 
-.nav-link:hover div {
+.link-active:hover div {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -182,7 +186,7 @@ a:focus {
   animation: nav_link_active 1s ease;
 }
 
-.nav-icon:hover + a div {
+.icon-active:hover + a div {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -192,6 +196,53 @@ a:focus {
   -webkit-animation: nav_link_active 1s ease;
   -moz-animation: nav_link_active 1s ease;
   animation: nav_link_active 1s ease;
+}
+
+.pagination {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.previous, .next {
+  position: relative;
+  text-decoration: none;
+}
+.previous:hover, .next:hover {
+  text-decoration: none;
+}
+
+#footer {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.icon-footer {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.icon-footer:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 0.8s ease;
+  -moz-transition: -moz-transform 0.8s ease;
+  transition: transform 0.8s ease;
+}
+.icon-footer.git {
+  background-image: url("/img/icon/Git.png");
+  background-image: url("/img/icon/Git.svg") none;
+}
+.icon-footer.sina {
+  background-image: url("/img/icon/sina.png");
+  background-image: url("/img/icon/sina.svg") none;
 }
 
 @-webkit-keyframes nav_link_active {
@@ -386,6 +437,10 @@ a:focus {
   .page-title {
     font-size: 2.0rem;
   }
+
+  .page_container a.page__link {
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 860px) {
   .main {
@@ -399,8 +454,7 @@ a:focus {
   .nav-link {
     display: none;
   }
-
-  .border_bottom_active {
+  .nav-link .border_bottom_active {
     display: none;
   }
 
