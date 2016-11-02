@@ -205,12 +205,12 @@ a:focus{
       @include transition(transform .8s ease);
     }
     &.git{
-    background-image: url('/img/icon/Git.png');
-    background-image: url('/img/icon/Git.svg') none;
+    background: url('/img/icon/Git.png');
+    background: url('/img/icon/Git.svg'),none;
    }
     &.sina{
-    background-image: url('/img/icon/sina.png');
-    background-image: url('/img/icon/sina.svg') none;
+    background: url('/img/icon/sina.png');
+    background: url('/img/icon/sina.svg'),none;
    }
   }
 

@@ -237,12 +237,12 @@ a:focus {
   transition: transform 0.8s ease;
 }
 .icon-footer.git {
-  background-image: url("/img/icon/Git.png");
-  background-image: url("/img/icon/Git.svg") none;
+  background: url("/img/icon/Git.png");
+  background: url("/img/icon/Git.svg") none;
 }
 .icon-footer.sina {
-  background-image: url("/img/icon/sina.png");
-  background-image: url("/img/icon/sina.svg") none;
+  background: url("/img/icon/sina.png");
+  background: url("/img/icon/sina.svg") none;
 }
 
 @-webkit-keyframes nav_link_active {
