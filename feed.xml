@@ -1,0 +1,33 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>白色风车 - 海源的博客</title>
+        <description>{{ site.name }}</description>
+        <link>{{ site.url }}</link>
+        <atom:link href="{{ site.url }}/feed-cn.xml" rel="self" type="application/rss+xml" />
+        <generator>http://wordpress.org/?v=4.1.13</generator>
+        {% for post in site.posts limit:10 %}
+            {% assign isZn = false %}
+            {% for tag in post.tags %}
+                {% if tag == '中文'%}
+                    {% assign isZn = true %}
+                {% endif %}
+            {% endfor %}
+            
+            {% if post.category != 'note' %}
+            {% if isZn == true %}
+            <item>
+                <title>{% if post.subtitle %}{{ post.subtitle | xml_escape }} {% endif %}{{ post.title | xml_escape }}</title>
+                <description>{{ post.content | xml_escape }}</description>
+                <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+                <link>{{ site.url }}{{ post.url }}</link>
+                <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+            </item>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+    </channel>
+</rss>

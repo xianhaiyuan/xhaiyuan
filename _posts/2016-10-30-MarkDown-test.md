@@ -3,9 +3,15 @@ layout: post
 title: Markdown-test
 time: 2016-11-1
 ---
-## Welcome to MarkdownPad 2 ##
+## Welcome to MarkdownPad 2
+
+# Welcome to MarkdownPad 2
+
+### Welcome to MarkdownPad 2
 
 **MarkdownPad** is a full-featured Markdown editor for Windows.
+
+<img src="/img/1.jpg" width="100px" height="100px" alt="">
 
 ### Built exclusively for Markdown ###
 
@@ -43,10 +49,12 @@ keyboard shortcuts.
 痛亦满分可否错一次以后
 一直爱
 (合)分手后天天都是最重要牺牲
-皮肤有你的指纹刻得太深
+### 皮肤有你的指纹刻得太深
+## 皮肤有你的指纹刻得太深
+# 皮肤有你的指纹刻得太深
 
 
-Give them a try:
+`Give them a try`:
 
 - **Bold** (`Ctrl+B`) and *Italic* (`Ctrl+I`)
 - Quotes (`Ctrl+Q`)
@@ -60,7 +68,10 @@ Don't guess if your [hyperlink syntax](http://markdownpad.com) is correct; LiveP
 
 ### Make it your own ###
 
-Fonts, color schemes, layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.
+``` html
+<div class="a-active">123</div> 
+```
+layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.
 
 ### A robust editor for advanced Markdown users ###
 
