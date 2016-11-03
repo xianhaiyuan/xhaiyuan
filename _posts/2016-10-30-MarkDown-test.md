@@ -71,7 +71,8 @@ Don't guess if your [hyperlink syntax](http://markdownpad.com) is correct; LiveP
 ### Make it your own ###
 
 ``` html
-<div class="a-active">123</div> 
+<div class="a-active">123</div>
+<a href="#"></a> 
 ```
 layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.
 
