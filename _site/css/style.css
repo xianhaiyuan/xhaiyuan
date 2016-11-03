@@ -11,7 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 Helvetica, arial, freesans, clean, sans-serif;
 =============================================================================*/
 .my_page--post {
-  font-family: "jdzhonyuanjian6bb305bf64196", Lato, "Microsoft YaHei", sans-serif;
+  font-family: "web-font", "Microsoft YaHei", sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
@@ -260,43 +260,27 @@ img {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #E0F7FB;
-  font-family: "jdzhonyuanjian6bb305bf64196", Lato, "Microsoft YaHei", sans-serif;
-  -webkit-tap-highlight-color: transparent;
-}
-
 @font-face {
-  font-family: 'iconfont';
-  src: url("fonts/iconfont/iconfont.eot");
-  src: url("fonts/iconfont/iconfont.eot?#iefix") format("embedded-opentype"), url("fonts/iconfont/iconfont.woff") format("woff"), url("fonts/iconfont/iconfont.ttf") format("truetype"), url("fonts/iconfont/iconfont.svg#iconfont") format("svg");
+  font-family: 'webfont';
+  src: url("fonts/siti/webfont.eot");
+  /* IE9*/
+  src: url("fonts/siti/webfont.eot?#iefix") format("embedded-opentype"), url("fonts/siti/webfont.woff") format("woff"), url("fonts/siti/webfont.ttf") format("truetype"), url("fonts/siti/webfont.svg#webfont") format("svg");
+  /* iOS 4.1- */
 }
-/*
-.iconfont {
-  font-family:"iconfont" !important;
-  height: 27px;
-  color: #707070;
-  line-height: 24px;
-  width: 27px;
-  font-size:27px;
-  font-style:normal;
-  cursor: pointer;
+.web-font {
+  font-family: "webfont" !important;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home:before { content: "\e60d"; }
+body {
+  background-color: #E0F7FB;
+  font-family: "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
 
-.icon-contact:before { content: "\e656"; }
-
-.icon-rss:before { content: "\e621"; }
-
-.icon-sina:before { content: "\e7cc"; }
-
-.icon-git:before { content: "\e60f"; }
-
-*/
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon/fonts/icomoon.eot?bjmgjl");
@@ -369,12 +353,15 @@ body {
 .page-title {
   margin: 1rem 0;
   padding: 1.2rem;
-  font-family: Lato, "Microsoft YaHei", sans-serif;
+  font-family: "minijianshaoer6cf69c5904196", "web-font", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   border-bottom: 8px solid #3399FF;
   font-size: 2.2rem;
   font-weight: 900;
   line-height: 1.5;
   color: #b7b7b7;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .list-nostyled {
@@ -848,7 +835,6 @@ a:focus {
   }
 
   .my_page--post {
-    font-family: "jdzhonyuanjian6bb305bf64196", Lato, "Microsoft YaHei", sans-serif;
     font-size: 1rem;
     padding: 15px;
   }
