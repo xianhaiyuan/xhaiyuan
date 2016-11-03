@@ -341,9 +341,13 @@ a.nav-link {
   color: #504F4F;
   line-height: 1.2;
   padding: 0 5px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 a.nav-link:hover {
+  color: #3399FF;
   outline: none;
   text-decoration: none;
 }
@@ -395,18 +399,12 @@ a:focus {
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.page_container a.page_link:hover {
-  color: #3399FF;
-}
-.page_container a.page_link:hover + div {
-  background-color: #444;
-  top: 0;
-  -webkit-animation: page_triangle_active 1s ease;
-  -moz-animation: page_triangle_active 1s ease;
-  animation: page_triangle_active 1s ease;
-}
-.page_container .border_left_active {
+.page_container a.page_link::before {
+  content: '';
   position: absolute;
   width: 3px;
   height: 30px;
@@ -414,8 +412,19 @@ a:focus {
   left: 0;
   background-color: transparent;
 }
+.page_container a.page_link:hover {
+  color: #3399FF;
+}
+.page_container a.page_link:hover::before {
+  background-color: #444;
+  top: 0;
+  -webkit-animation: page_triangle_active 1s ease;
+  -moz-animation: page_triangle_active 1s ease;
+  animation: page_triangle_active 1s ease;
+}
 
-.a-active {
+.link-active::after {
+  content: '';
   display: inline-block;
   border-bottom: 4px solid transparent;
   left: 0;
@@ -428,8 +437,7 @@ a:focus {
   -o-transform: translateX(30%);
   transform: translateX(30%);
 }
-
-.link-active:hover div {
+.link-active:hover::after {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -441,7 +449,7 @@ a:focus {
   animation: nav_link_active 1s ease;
 }
 
-.icon-active:hover + a div {
+.icon-active:hover + a::after {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -451,6 +459,9 @@ a:focus {
   -webkit-animation: nav_link_active 1s ease;
   -moz-animation: nav_link_active 1s ease;
   animation: nav_link_active 1s ease;
+}
+.icon-active:hover + a {
+  color: #3399FF;
 }
 
 .pagination {
@@ -723,9 +734,6 @@ a:focus {
   }
 
   .nav-link {
-    display: none;
-  }
-  .nav-link .a-active {
     display: none;
   }
 
