@@ -15,19 +15,82 @@ body{
 }
 @font-face {
   font-family: 'iconfont';
-  src: url('iconfont.eot');
-  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-  url('iconfont.woff') format('woff'),
-  url('iconfont.ttf') format('truetype'),
-  url('iconfont.svg#iconfont') format('svg');
+  src: url('fonts/iconfont/iconfont.eot');
+  src: url('fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/iconfont/iconfont.woff') format('woff'),
+  url('fonts/iconfont/iconfont.ttf') format('truetype'),
+  url('fonts/iconfont/iconfont.svg#iconfont') format('svg');
 }
-.iconfont{
+/*
+.iconfont {
   font-family:"iconfont" !important;
-  font-size:16px;font-style:normal;
+  height: 27px;
+  color: #707070;
+  line-height: 24px;
+  width: 27px;
+  font-size:27px;
+  font-style:normal;
+  cursor: pointer;
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-home:before { content: "\e60d"; }
+
+.icon-contact:before { content: "\e656"; }
+
+.icon-rss:before { content: "\e621"; }
+
+.icon-sina:before { content: "\e7cc"; }
+
+.icon-git:before { content: "\e60f"; }
+
+*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon/fonts/icomoon.eot?bjmgjl');
+  src:  url('fonts/icomoon/fonts/icomoon.eot?bjmgjl#iefix') format('embedded-opentype'),
+    url('fonts/icomoon/fonts/icomoon.ttf?bjmgjl') format('truetype'),
+    url('fonts/icomoon/fonts/icomoon.woff?bjmgjl') format('woff'),
+    url('fonts/icomoon/fonts/icomoon.svg?bjmgjl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1.3rem;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-sina-weibo:before {
+  content: "\ea9a";
+}
+.icon-rss:before {
+  content: "\ea9b";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
 .center{
   text-align: center;
 }
@@ -87,13 +150,27 @@ body{
     align-items: center;
     position: relative;
   }
-  image{
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+} 
+a.nav-icon{
+  color: darken(#ddd,50%);
+  @include transition(all .5s ease);
+  &:hover{
+    text-decoration: none;
+  }
+  &:hover + a::after{
+      @include transform(translateX(0));
+      border-bottom: 4px solid $color-5;
+      @include animation(nav_link_active 1s ease);
+  }
+  &:hover + a{
+    color: $color-6;
+  }
+  &:hover{
+    color: #5490CA;
   }
 }
 a.nav-link{
+  font-size: 1.2rem;
   position: relative;
   text-decoration: none;
   color: $color-3;
@@ -189,16 +266,6 @@ a:focus{
      @include animation(nav_link_active 1s ease);
     }
   }
-  .icon-active:hover{
-    &+a::after{
-      @include transform(translateX(0));
-      border-bottom: 4px solid $color-5;
-      @include animation(nav_link_active 1s ease);
-    }
-    &+a{
-      color: $color-6;
-    }
-  } 
 
   .pagination{
     text-align: center;
@@ -223,23 +290,16 @@ a:focus{
   }
 
   .icon-footer{
+    font-size: 1.1rem;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
     display: inline-block;
+    color: darken(#ddd,40%);
+    @include transition(all 1s ease);
     &:hover{
-      @include transform(rotate(360deg));
-      @include transition(transform .8s ease);
+      text-decoration: none;
+      color: #5490CA;
     }
-    &.git{
-    background: url('/img/icon/Git.png');
-    background: url('/img/icon/Git.svg'),none;
-   }
-    &.sina{
-    background: url('/img/icon/sina.png');
-    background: url('/img/icon/sina.svg'),none;
-   }
-  }
+}
 
 
   @include keyframes(nav_link_active) {
@@ -321,16 +381,6 @@ a:focus{
     }
     .nav-link{
       display: none;
-    }
-    .nav-list{
-      a{
-        width: 30px;
-        height: 30px;
-      }
-      a:hover{
-        @include transform(rotate(360deg));
-        @include transition(transform .8s ease);
-      }
     }
     .page_container a.page__link{
       font-size: 1.3rem;
