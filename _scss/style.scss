@@ -106,10 +106,11 @@ body{
   color: darken(#ddd,15%);
   @include transition(all .8s ease);
  }
- .my_page--default{
- }
 .list-nostyled{
   list-style: none;
+}
+.highlight{
+  border-radius: 10px;
 }
 .nav-list{
   display: -webkit-box;
@@ -405,7 +406,7 @@ a:focus{
     }
     .my_page--post {
       font-size: 1rem;
-      padding: 15px;
+      padding: 10px;
     }
     h1 {
       font-size: 1.6rem;

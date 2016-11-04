@@ -368,6 +368,10 @@ body {
   list-style: none;
 }
 
+.highlight {
+  border-radius: 10px;
+}
+
 .nav-list {
   display: -webkit-box;
   display: -moz-box;
@@ -836,7 +840,7 @@ a:focus {
 
   .my_page--post {
     font-size: 1rem;
-    padding: 15px;
+    padding: 10px;
   }
 
   h1 {
