@@ -3,11 +3,13 @@
   Page: 
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous link-active">Pre</a>
-  {% else %}
   {% endif %}
+  {% if paginator.page %}
   {{ paginator.page }} / {{ paginator.total_pages }}</span>
+  {% else %}
+  0 / 0
+  {% endif %}
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next link-active">Next</a>
-  {% else %}
   {% endif %}
 </div>
