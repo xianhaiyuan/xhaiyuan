@@ -81,13 +81,21 @@ table tr:nth-child(2n) {
 	width: 100%;
 }
 .nav ul{
-	display: flex;
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -o-box;
+  	display: -ms-flexbox;
+  	display: flex;
 	justify-content:center;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
 .nav ul li{
+	-moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -o-box-flex: 1;
+    -ms-flex: 1;
 	width: 10%;
 	word-break: normal;
 	word-wrap: break-word;
