@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="/bitbug_favicon.ico" >
+	<link href='//cdn.webfont.youziku.com/webfonts/nomal/16790/19466/581b3353f629d80df8fad786.css' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="/css/app.min.css">
+<!-- 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/monokai-sublime.css"> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="canonical" href="http://localhost:4000/2016/11/09/test.html" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="keywords" content="白色风车 Javascript正则一篇入门，不入魂 海源 个人博客 haiyuan">
+	<meta name="description" content="白色风车 海源 haiyuan">
+	<meta name="author" content="haiyuan,269699181@qq.com">
+	<title>Javascript正则一篇入门，不入魂 - 海源的博客</title>
+</head>
+
+<body>
+	<div class="main">
+		<div class="page-title center">
+			Javascript正则一篇入门，不入魂
+		</div>
+	<nav>
+		<ul class="nav-list list-nostyled center">
+			<li>
+				<a class="nav-icon" href="http://localhost:4000">
+					<i class="icon-home"></i>
+				</a>
+				<a href="http://localhost:4000" class="nav-link center link-active">Home
+				</a>
+			</li>
+			<li>
+				<a class="nav-icon" href="http://localhost:4000/about">
+					<i class="icon-user"></i>
+				</a>
+				<a href="http://localhost:4000/about" class="nav-link center link-active">About
+				</a>
+			</li>
+			<li class="rss">
+				<a class="nav-icon" href="/feed.xml"><i class="icon-rss"></i></a>
+				<a href="/feed.xml" class="nav-link center link-active" target="_blank">Rss
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="my_page my_page--post web-font">
+		<p>这里不会对正则的背景进行介绍，将直接对正则的使用进行讲解。</p>
+
+<blockquote>
+  <p>注意：有一些文章和书本可能为了让正则表达式看起来不那么密密麻麻，<br />
+而在正则表达式里加了空格隔开，例如<code class="highlighter-rouge">/(\w+)\s(\w+)/</code>,这个表达式可以匹配<br />
+Hello RegExp，但有的文章和书本里写成<code class="highlighter-rouge">/(\w+) \s (\w+)/</code>，这样的话就不是<br />
+匹配Hello RegExp，而是匹配Hello RegExp中间再加两个空格。</p>
+</blockquote>
+
+<h2 id="javascript">Javascript正则表达式的定义</h2>
+<p>1.构造函数定义</p>
+
+<p>(1)</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="sr">/</span><span class="se">(\w</span><span class="sr">+</span><span class="se">)\s(\w</span><span class="sr">+</span><span class="se">)</span><span class="sr">/</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="sr">/</span><span class="se">(\w</span><span class="sr">+</span><span class="se">)\s(\w</span><span class="sr">+</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span><span class="s1">'gim'</span><span class="p">);</span>    
+</code></pre>
+</div>
+
+<p>g,i,m为可选属性。</p>
+
+<ul>
+  <li>g–全文查找</li>
+  <li>i–忽略大小写</li>
+  <li>m–多行查找</li>
+</ul>
+
+<p>(2)</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>注意第二种用双引号或单引号包含正则表达式的方式只能匹配对应的字符，而把正则表达式写入则不能匹配成功。<br />
+如：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"/(\w+)\s(\w+)/"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"(\w+)\s(\w+)"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>上面两个都不能匹配Hello RegExp,第三个可以匹配hello，所以建议用方式(1)定义正则表达式。</p>
+
+<p>2.直接定义</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/</span><span class="se">(\w</span><span class="sr">+</span><span class="se">)\s(\w</span><span class="sr">+</span><span class="se">)</span><span class="sr">/</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>这种方式简单不易出错.</p>
+
+	</div>
+</div>
+<footer id="footer">
+	<a class="icon-footer" href="https://github.com/xianhaiyuan" target="_blank">
+		<i class="icon-github"></i>
+	</a>
+	<a class="icon-footer" href="http://weibo.com/2635183195" target="_blank">
+		<i class="icon-sina-weibo"></i>
+	</a>
+</footer>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
