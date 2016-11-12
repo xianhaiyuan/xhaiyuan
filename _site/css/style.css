@@ -11,7 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 Helvetica, arial, freesans, clean, sans-serif;
 =============================================================================*/
 .my_page--post {
-  font-family: "web-font", "Microsoft YaHei", sans-serif;
+  font-family: "web-font", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
@@ -204,7 +204,7 @@ blockquote {
   border-left: 6px solid #3399FF;
   padding: 0 15px;
   color: #777;
-  background-color: #86e0ef;
+  background-color: #eee;
 }
 
 blockquote > :first-child {
@@ -266,6 +266,19 @@ img {
   /* IE9*/
   src: url("fonts/siti/webfont.eot?#iefix") format("embedded-opentype"), url("fonts/siti/webfont.woff") format("woff"), url("fonts/siti/webfont.ttf") format("truetype"), url("fonts/siti/webfont.svg#webfont") format("svg");
   /* iOS 4.1- */
+}
+@font-face {
+  font-family: TITLE;
+  src: url("fonts/Scans-w3/Hiragino Sans GB W3.ttf"), local("PingFang SC"), local("Microsoft Yahei");
+}
+@font-face {
+  font-family: CONTENT;
+  src: local("Microsoft Yahei"), local("PingFang SC"), local(sans-serif);
+}
+@font-face {
+  font-family: quote;
+  src: local("SimSun");
+  unicode-range: U+201c, U+201d;
 }
 .web-font {
   font-family: "webfont" !important;
@@ -353,7 +366,7 @@ body {
 .page-title {
   margin: 1rem 0;
   padding: 1.2rem;
-  font-family: "minijianshaoer6cf69c5904196", "web-font", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-family: "minijianshaoer6cf69c5904196", TITLE,quote;
   border-bottom: 8px solid #3399FF;
   font-size: 2.2rem;
   font-weight: 900;
@@ -362,6 +375,10 @@ body {
   -webkit-transition: all 0.8s ease;
   -moz-transition: all 0.8s ease;
   transition: all 0.8s ease;
+}
+
+.my_page--default {
+  font-family: CONTENT,quote;
 }
 
 .list-nostyled {

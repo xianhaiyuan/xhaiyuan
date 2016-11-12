@@ -16,6 +16,24 @@
     url('fonts/siti/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('fonts/siti/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
+@font-face {
+  font-family: TITLE;
+  src: url('fonts/Scans-w3/Hiragino Sans GB W3.ttf'),
+       local('PingFang SC'),
+       local("Microsoft Yahei");
+}
+@font-face {
+  font-family: CONTENT;
+  src: 
+       local("Microsoft Yahei"),
+       local('PingFang SC'),
+       local(sans-serif);
+}
+@font-face {
+  font-family: quote;
+  src: local('SimSun');    
+  unicode-range: U+201c, U+201d;
+}
 .web-font{
     font-family:"webfont" !important;
     font-style:normal;
@@ -98,13 +116,16 @@ body{
 .page-title{
   margin: 1rem 0;
   padding: 1.2rem;
-  font-family: $page-title-font;
+  font-family: "minijianshaoer6cf69c5904196", TITLE,quote;
   border-bottom: 8px solid $color-6;
   font-size: 2.2rem;
   font-weight: 900;
   line-height: 1.5;
   color: darken(#ddd,15%);
   @include transition(all .8s ease);
+ }
+ .my_page--default{
+  font-family: CONTENT,quote;
  }
 .list-nostyled{
   list-style: none;
