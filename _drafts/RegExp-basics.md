@@ -49,7 +49,7 @@ var reg = new RegExp("hello");
 
 上面两个都不能匹配Hello RegExp,第三个可以匹配hello，所以建议用方式(1)定义正则表达式。
 
-2.直接定义
+2.字面量定义
 
 ```javascript
 var reg = /(\w+)\s(\w+)/;

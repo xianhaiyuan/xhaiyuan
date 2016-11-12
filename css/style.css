@@ -204,7 +204,7 @@ blockquote {
   border-left: 6px solid #3399FF;
   padding: 0 15px;
   color: #777;
-  background-color: #86e0ef;
+  background-color: #eee;
 }
 
 blockquote > :first-child {
