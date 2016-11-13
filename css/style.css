@@ -322,7 +322,7 @@ img {
 }
 @font-face {
   font-family: CONTENT;
-  src: local("STXinwei"), local("Microsoft Yahei"), local("PingFang SC"), local(sans-serif);
+  src: local("Microsoft Yahei"), local("PingFang SC"), local(sans-serif);
 }
 @font-face {
   font-family: quote;
