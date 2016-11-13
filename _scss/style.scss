@@ -1,8 +1,49 @@
-@import 'reset.css';
 @import 'bourbon/bourbon';
 @import 'partials/layout';
 @import 'partials/mixins';
 @import 'partials/variables';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 
 @mixin main(){
   *, *::before, *::after {
@@ -10,21 +51,31 @@
 }
 @font-face {
     font-family: 'webfont';
-    src: url('fonts/siti/webfont.eot'); /* IE9*/
-    src: url('fonts/siti/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('fonts/siti/webfont.woff') format('woff'), /* chrome、firefox */
-    url('fonts/siti/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('fonts/siti/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+    src: url('/css/fonts/siti/webfont.eot'); /* IE9*/
+    src: url('/css/fonts/siti/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/css/fonts/siti/webfont.woff') format('woff'), /* chrome、firefox */
+    url('/css/fonts/siti/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('/css/fonts/siti/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
 @font-face {
   font-family: TITLE;
-  src: url('fonts/Scans-w3/Hiragino Sans GB W3.ttf'),
+  src: local('STXinwei'),
+       local('STKaiti'),
+       local('KaiTi'),
+       local('PingFang SC'),
+       local("Microsoft Yahei");
+}
+@font-face {
+  font-family: BLOGTITLE;
+  src: local('STZhongsong'),
+       local('STKaiti'),
+       local('KaiTi'),
        local('PingFang SC'),
        local("Microsoft Yahei");
 }
 @font-face {
   font-family: CONTENT;
-  src: 
+  src: local('STXinwei'),
        local("Microsoft Yahei"),
        local('PingFang SC'),
        local(sans-serif);
@@ -43,16 +94,16 @@
   }
 body{
   background-color: $color-1;
-  font-family: $primary-font;
+  font-family: CONTENT;
   -webkit-tap-highlight-color:transparent;
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon/fonts/icomoon.eot?bjmgjl');
-  src:  url('fonts/icomoon/fonts/icomoon.eot?bjmgjl#iefix') format('embedded-opentype'),
-  url('fonts/icomoon/fonts/icomoon.ttf?bjmgjl') format('truetype'),
-  url('fonts/icomoon/fonts/icomoon.woff?bjmgjl') format('woff'),
-  url('fonts/icomoon/fonts/icomoon.svg?bjmgjl#icomoon') format('svg');
+  src:  url('/css/fonts/icomoon/fonts/icomoon.eot?bjmgjl');
+  src:  url('/css/fonts/icomoon/fonts/icomoon.eot?bjmgjl#iefix') format('embedded-opentype'),
+  url('/css/fonts/icomoon/fonts/icomoon.ttf?bjmgjl') format('truetype'),
+  url('/css/fonts/icomoon/fonts/icomoon.woff?bjmgjl') format('woff'),
+  url('/css/fonts/icomoon/fonts/icomoon.svg?bjmgjl#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -198,6 +249,7 @@ a:focus{
     margin: 0;
   }
   .blog_title{
+    font-family: BLOGTITLE;
     position: relative;
     height: 100%;
     background:url('/img/icon/triangle.png') no-repeat;
