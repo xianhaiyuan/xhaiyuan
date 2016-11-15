@@ -60,7 +60,7 @@ Helvetica, arial, freesans, clean, sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #333;
-  background-color: #fff;
+  background-color: #fff9fd;
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
@@ -322,7 +322,7 @@ img {
 }
 @font-face {
   font-family: CONTENT;
-  src: local("STXinwei"), local("Microsoft Yahei"), local("PingFang SC"), local(sans-serif);
+  src: local("Microsoft Yahei"), local("PingFang SC"), local(sans-serif);
 }
 @font-face {
   font-family: quote;
@@ -396,7 +396,7 @@ body {
   top: 35px;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
   position: relative;
-  background-color: white;
+  background-color: #fff9fd;
 }
 
 .main::before {
@@ -409,7 +409,7 @@ body {
   left: 0;
   right: 0;
   bottom: 100%;
-  background-image: linear-gradient(1deg, white, 50%, transparent 50%);
+  background-image: linear-gradient(1deg, #fff9fd, 50%, transparent 50%);
 }
 
 .page-title {
@@ -518,7 +518,7 @@ a:focus {
   margin: 0;
 }
 .page_container .blog_title {
-  font-family: BLOGTITLE;
+  font-family: BLOGTITLE,quote;
   position: relative;
   height: 100%;
   background: url("/img/icon/triangle.png") no-repeat;
