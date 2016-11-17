@@ -527,6 +527,8 @@ Helvetica, arial, freesans, clean, sans-serif;
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .my_page--post>*:first-child {
