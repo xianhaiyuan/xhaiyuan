@@ -19,10 +19,18 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers  */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, main {
   display: block;
+}
+
+::selection {
+  color: #F92672;
+}
+
+::-moz-selection {
+  color: #F92672;
 }
 
 body {
@@ -64,6 +72,8 @@ Helvetica, arial, freesans, clean, sans-serif;
   padding: 20px;
   max-width: 960px;
   margin: 0 auto;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .my_page--post > *:first-child {
