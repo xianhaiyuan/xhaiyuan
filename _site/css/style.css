@@ -74,6 +74,7 @@ Helvetica, arial, freesans, clean, sans-serif;
   margin: 0 auto;
   white-space: normal;
   overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .my_page--post > *:first-child {
@@ -339,6 +340,11 @@ img {
   src: local("SimSun");
   unicode-range: U+201c, U+201d;
 }
+@font-face {
+  font-family: quote-post;
+  src: local("Microsoft Yahei");
+  unicode-range: U+201c, U+201d;
+}
 .web-font {
   font-family: "webfont" !important;
   font-style: normal;
@@ -437,7 +443,7 @@ body {
 }
 
 .my_page--default {
-  font-family: CONTENT,quote;
+  font-family: quote-post,CONTENT;
 }
 
 .list-nostyled {
