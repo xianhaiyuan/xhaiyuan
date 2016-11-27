@@ -74,6 +74,7 @@ Helvetica, arial, freesans, clean, sans-serif;
   margin: 0 auto;
   white-space: normal;
   overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .my_page--post > *:first-child {
