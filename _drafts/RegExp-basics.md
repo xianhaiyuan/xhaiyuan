@@ -73,7 +73,7 @@ for (i = 0; i < 10; i++){
 
 ## 正则表达式的方法和属性 ##
 
-1.exec()
+1.exec(str)
 
 exec()方法接受一个参数，即要应用模式的字符串，返回包含第一个匹配项信息的数组，没有匹配项的情况下返回null。返回的是Array实例，另外还包含两个额外的属性，index和input，index表示匹配项在字符串中的位置，input表示应用正则表达式的字符串。
 
@@ -118,11 +118,27 @@ alert(matches[0]);        //"bat"
 alert(pattern2.lastIndex);//8
 ```	
 
-2.test()
+2.test(str)
 
 test()方法接受一个字符串参数。在模式与该参数匹配的情况下返回true，否则返回false。
 
-3.正则属性
+3.replace(RegExp/str,str_replace)
+
+replace()方法接受两个参数，第一个参数为字符串或RegExp对象，第二个参数为字符串或一个回调函数，若为字符串，第二个参数将替换第一个参数匹配到的值，然后将替换后的原文本作为返回值返回，其中第二个参数中可包含RegExp属性$1~$9,表示从原文本中捕获到的对象，使用$1~$9属性时，第一个参数必须是RegExp对象,且需用()来捕获。
+
+注意调用函数str.replace(),并不改变str的值。
+
+```javascript
+var text = "first_second";
+var text_replaced = text.replace(/first/,"1");
+alert(text);    //first_second
+alert(text_replaced);    //1_second
+
+text_replaced = text.replace(/(first)/,"1$1");
+alert(text_replaced);     ////1first_second
+```
+
+x.正则属性
 
 | 属性名         　　 |  说明                                     |
 | -------------      |:-------------:                           |
