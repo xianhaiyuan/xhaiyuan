@@ -295,7 +295,7 @@ a:focus{
     font-size: 1.6rem;
     font-weight: bold;
     text-decoration: none;
-    @include transition(all .5s ease);
+    @include transition(all .8s ease);
       &::before{
         content: '';
         position: absolute;
@@ -304,6 +304,7 @@ a:focus{
         top: -10px;
         left: 0;
         background-color: transparent; 
+        @include transition(all .8s ease);
       }
       &:hover{
         color: $color-6;
@@ -325,6 +326,7 @@ a:focus{
       bottom: -5px;
       width: 100%;
       @include transform(translateX(30%));
+      @include transition(all .8s ease);
     }
     &:hover::after{
      @include transform(translateX(0));

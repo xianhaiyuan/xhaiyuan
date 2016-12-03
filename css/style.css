@@ -564,9 +564,9 @@ a:focus {
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 .page_container a.page_link::before {
   content: '';
@@ -576,6 +576,9 @@ a:focus {
   top: -10px;
   left: 0;
   background-color: transparent;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 .page_container a.page_link:hover {
   color: #3399FF;
@@ -601,6 +604,9 @@ a:focus {
   -ms-transform: translateX(30%);
   -o-transform: translateX(30%);
   transform: translateX(30%);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 .link-active:hover::after {
   -webkit-transform: translateX(0);
