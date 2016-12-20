@@ -16,6 +16,9 @@ excerpt: ubuntu node配置，阅读时间1-3分钟
 
 ```Bash
 sudo apt-get install git
+设置git的用户用和邮箱
+git config --global user.name xxx
+git config --global user.email xxx@example.com
 ```
 
 #### 2.n和nvm ####
