@@ -5,7 +5,7 @@ time: 2016/12/20
 tags:
 - ubuntu
 - 初始化
-excerpt: ubuntu初始配置,阅读时间1-3分钟
+excerpt: ubuntu初始配置，阅读时间1-3分钟
 ---
 
 #### 1.首先更换源。 ####

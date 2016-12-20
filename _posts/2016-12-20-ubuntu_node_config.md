@@ -4,10 +4,12 @@ layout: post
 time: 2016/12/20
 tags:
 - ubuntu
+- git
 - node配置
 - nvm
 - npm
-excerpt: ubuntu node配置,阅读时间1-3分钟
+- cnpm
+excerpt: ubuntu node配置，阅读时间1-3分钟
 ---
 
 #### 1.首先安装git ####
