@@ -64,6 +64,7 @@ nrm ls
 nrm use cnpm
 nrm ls
 ```
+
 #### 5.安装nodemon ####
 
 nodemon是一个nodejs监视工具，和supervisor相似。
