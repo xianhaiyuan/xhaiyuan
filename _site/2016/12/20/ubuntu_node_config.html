@@ -59,7 +59,11 @@
 <pre><code class="language-Bash">sudo apt-get install git
 </code></pre>
 
-<h4 id="nvm">2.安装nvm</h4>
+<h4 id="nnvm">2.n和nvm</h4>
+
+<p>通常我们使用稳定的 LTS 版本的 Node.js 即可，但有的情况下我们又想尝试一下新的特性，我们总不能来回安装不同版本的 Node.js 吧，这个时候我们就需要 <a href="https://github.com/tj/n">n</a> 或者 <a href="https://github.com/creationix/nvm">nvm</a> 了。n 和 nvm 是两个常用的 Node.js 版本管理工具，关于 n 和 nvm 的使用以及区别，<a href="http://taobaofed.org/blog/2015/11/17/nvm-or-n/">这篇文章</a> 讲得特别详细，这里不再赘述。</p>
+
+<h4 id="nvm">3.安装nvm</h4>
 <pre><code class="language-Bash">git clone https://github.com/creationix/nvm.git ~/.nvm &amp;&amp; cd ~/.nvm &amp;&amp; git checkout `git describe --abbrev=0 --tags`
 
 配置环境变量
