@@ -8,7 +8,7 @@ tags:
 excerpt: ubuntu初始配置,阅读时间1-3分钟
 ---
 
-### 首先更换源。 ###
+#### 首先更换源。 ####
 
 ```Bash
 cd /etc/apt/
@@ -37,14 +37,14 @@ deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
 sudo apt-get update
 ```
 
-### 由于ubuntu自带的vim很恶心，所以重新装一个。 ###
+##### 由于ubuntu自带的vim很恶心，所以重新装一个。 #####
 
 ```Bash
 sudo apt-get remove vim-common
 sudo apt-get install vim
 ```
 
-### 安装ssh服务器 ###
+** 安装ssh服务器 **
 ```Bash
 sudo apt-get install openssh-server
 /etc/init.d/ssh restart
