@@ -8,14 +8,14 @@
 <!-- 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/monokai-sublime.css"> -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="canonical" href="http://localhost:4000/about/" />
+	<link rel="canonical" href="http://localhost:4000/2016/12/20/ubuntu_config.html" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-siteapp">
-	<meta name="keywords" content="白色风车 关于我 海源 个人博客 haiyuan">
+	<meta name="keywords" content="白色风车 ubuntu配置日记--初始配置 海源 个人博客 haiyuan">
 	<meta name="description" content="白色风车 海源 haiyuan">
 	<meta name="author" content="海源,haiyuan,xianhaiyuan@gmail.com,269699181@qq.com">
-	<title>关于我 - 海源的博客</title>
+	<title>ubuntu配置日记--初始配置 - 海源的博客</title>
 	<script>
 // 	(function() {
 //     if ( window.location.protocol.indexOf('s') < 0 ) {
@@ -28,7 +28,7 @@
 <body>
 	<div class="main">
 		<div class="page-title center">
-			关于我
+			ubuntu配置日记--初始配置
 		</div>
 	<nav>
 		<ul class="nav-list list-nostyled center">
@@ -54,13 +54,44 @@
 		</ul>
 	</nav>
 	<div class="my_page my_page--post web-font">
-		<h2 id="section">个人简介</h2>
-<ul>
-  <li>学校：目前就读于湛江师范学院</li>
-  <li>沉迷：web前端、羽毛球</li>
-  <li>最近状态：学习、准备考研</li>
-  <li>e-mail：xianhaiyuan@gmail.com</li>
-</ul>
+		<h4 id="section">1.首先更换源。</h4>
+
+<pre><code class="language-Bash">cd /etc/apt/
+sudo cp sources.list sources.list.bk
+vi sources.list
+
+# deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
+deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse #Added by software-properties
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+
+sudo apt-get update
+</code></pre>
+
+<h4 id="ubuntuvim">2.由于ubuntu自带的vim很恶心，所以重新装一个。</h4>
+
+<pre><code class="language-Bash">sudo apt-get remove vim-common
+sudo apt-get install vim
+</code></pre>
+
+<h4 id="ssh">3.安装ssh服务器</h4>
+<pre><code class="language-Bash">sudo apt-get install openssh-server
+/etc/init.d/ssh restart
+</code></pre>
 
 	</div>
 </div>

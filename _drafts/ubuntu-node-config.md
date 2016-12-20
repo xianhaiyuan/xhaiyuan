@@ -37,7 +37,6 @@ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git check
 
 cd
 vim ~/.bashrc
-加入
 source ~/.nvm/nvm.sh
 
 在~/.bashrc, ~/.profile, or ~/.zshrc中添加下面的脚本。

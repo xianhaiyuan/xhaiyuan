@@ -1,5 +1,5 @@
 ---
-title: ubuntu配置日记
+title: ubuntu配置日记--初始配置
 layout: post
 time: 2016/12/20
 tags:
@@ -44,7 +44,7 @@ sudo apt-get remove vim-common
 sudo apt-get install vim
 ```
 
-**3.安装ssh服务器**
+#### 3.安装ssh服务器 ####
 ```Bash
 sudo apt-get install openssh-server
 /etc/init.d/ssh restart
