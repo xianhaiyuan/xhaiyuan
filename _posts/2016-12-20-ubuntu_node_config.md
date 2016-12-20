@@ -45,8 +45,30 @@ nvm install v6.9.2
 nvm use v4.7.0
 node -v
 
+设置默认版本
+nvm alias default v4.7.0
 
-安装cnpm
+安装cnpm，由于我已经安装了nvm，所以在全局安装的时候就不用sudo npm
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm -v
+
+```
+
+#### 4.如果想更方便用其他的源，也可以安装nrm ####
+
+[nrm](https://github.com/Pana/nrm) 是一个管理 npm 源的工具。用过 ruby 和 gem 的同学会比较熟悉，通常我们会把 gem 源切到国内的淘宝镜像，这样在安装和更新一些包的时候比较快。nrm 同理，用来切换官方 npm 源和国内的 npm 源（如: [cnpm](http://cnpmjs.org/)），当然也可以用来切换官方 npm 源和公司私有 npm 源。
+
+``` Bash
+npm i -g nrm
+nrm ls
+nrm use cnpm
+nrm ls
+```
+#### 5.安装nodemon ####
+
+nodemon是一个nodejs监视工具，和supervisor相似。
+
+```Bash
+cnpm i -g nodemon
+nodemon -v
 ```
