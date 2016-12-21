@@ -63,7 +63,7 @@ sudo -S mongod --dbpath /var/lib/mongodb/ --logpath /var/log/mongodb/mongodb.log
 EOF
 
 chmod +x mongo.sh
-./mongo.sh
+sudo ./mongo.sh
 ```
 **关闭服务**
 
