@@ -455,25 +455,35 @@ a:focus{
     }
     .my_page--post{
       font-size: 1.1rem;
-    }
-    
-    h1 {
+
+      h1 {
       font-size: 1.8rem;
       border-top: 3px solid #ddd;
       color: $color-6;
       text-shadow: 1px 1px #efefef,2px 2px lighten($color-6,5%);
       padding-bottom: 0.5rem;
       padding-top: 1rem;
-    }
+      }
 
-    h2 {
-      font-size: 1.6rem;
-      color: #444;
-    }
+      h2 {
+        font-size: 1.6rem;
+        color: #444;
+      }
 
-    h3 {
-      font-size: 1.4rem;
-      color: #444;
+      h3 {
+        font-size: 1.4rem;
+        color: #444;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        color: #444;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+
     }
 
    }
@@ -493,24 +503,35 @@ a:focus{
     .my_page--post {
       font-size: 1rem;
       padding: 10px;
-    }
-    h1 {
-      font-size: 1.6rem;
-      border-top: 3px solid #ddd;
-      color: $color-6;
-      text-shadow: 1px 1px #efefef,2px 2px lighten($color-6,5%);
-      padding-bottom: 0.5rem;
-      padding-top: 1rem;
-    }
 
-    h2 {
-      font-size: 1.4rem;
-      color: #444;
-    }
+      h1 {
+        font-size: 1.6rem;
+        border-top: 3px solid #ddd;
+        color: $color-6;
+        text-shadow: 1px 1px #efefef,2px 2px lighten($color-6,5%);
+        padding-bottom: 0.5rem;
+        padding-top: 1rem;
+      }
 
-    h3 {
-      font-size: 1.2rem;
-      color: #444;
+      h2 {
+        font-size: 1.4rem;
+        color: #444;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        color: #444;
+      }
+
+      h4 {
+        font-size: 1rem;
+        color: #444;
+      }
+
+      h5{
+        font-size: 0.8rem;
+        color: #444;
+      }
     }
  }
 }
@@ -575,41 +596,44 @@ Helvetica, arial, freesans, clean, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
+  
+  .my_page--post{
+    h1 {
+      font-size: 2rem;
+      border-top: 3px solid #ddd;
+      color: $color-6;
+      text-shadow: 1px 1px #efefef,2px 2px lighten($color-6,5%);
+      padding-bottom: 0.5rem;
+      padding-top: 1rem;
+    }
 
+    h2 {
+      font-size: 1.8rem;
+      color: #444;
+    }
 
-  h1 {
-    font-size: 2.1rem;
-    border-top: 3px solid #ddd;
-    color: $color-6;
-    text-shadow: 1px 1px #efefef,2px 2px lighten($color-6,5%);
-    padding-bottom: 0.5rem;
-    padding-top: 1rem;
+    h3 {
+      font-size: 1.6rem;
+      color: #444;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+      color: #444;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    h6 {
+      color: #777;
+      font-size: 1rem;
+    }
   }
 
-  h2 {
-    font-size: 1.9rem;
-    color: #444;
-  }
 
-  h3 {
-    font-size: 1.6rem;
-    color: #444;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-    color: #444;
-  }
-
-  h5 {
-    font-size: 1rem;
-    color: #444;
-  }
-
-  h6 {
-    color: #777;
-    font-size: 14px;
-  }
 
   body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
     margin-top: 0;

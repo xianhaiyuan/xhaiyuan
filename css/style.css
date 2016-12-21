@@ -90,33 +90,28 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   -webkit-font-smoothing: antialiased; }
 
-h1 {
-  font-size: 2.1rem;
+.my_page--post h1 {
+  font-size: 2rem;
   border-top: 3px solid #ddd;
   color: #3399FF;
   text-shadow: 1px 1px #efefef, 2px 2px #4da6ff;
   padding-bottom: 0.5rem;
   padding-top: 1rem; }
-
-h2 {
-  font-size: 1.9rem;
+.my_page--post h2 {
+  font-size: 1.8rem;
   color: #444; }
-
-h3 {
+.my_page--post h3 {
   font-size: 1.6rem;
   color: #444; }
-
-h4 {
+.my_page--post h4 {
+  font-size: 1.4rem;
+  color: #444; }
+.my_page--post h5 {
   font-size: 1.2rem;
   color: #444; }
-
-h5 {
-  font-size: 1rem;
-  color: #444; }
-
-h6 {
+.my_page--post h6 {
   color: #777;
-  font-size: 14px; }
+  font-size: 1rem; }
 
 body > h2:first-child, body > h1:first-child, body > h1:first-child + h2, body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
   margin-top: 0;
@@ -736,22 +731,24 @@ a:focus {
 
   .my_page--post {
     font-size: 1.1rem; }
-
-  h1 {
-    font-size: 1.8rem;
-    border-top: 3px solid #ddd;
-    color: #3399FF;
-    text-shadow: 1px 1px #efefef, 2px 2px #4da6ff;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem; }
-
-  h2 {
-    font-size: 1.6rem;
-    color: #444; }
-
-  h3 {
-    font-size: 1.4rem;
-    color: #444; } }
+    .my_page--post h1 {
+      font-size: 1.8rem;
+      border-top: 3px solid #ddd;
+      color: #3399FF;
+      text-shadow: 1px 1px #efefef, 2px 2px #4da6ff;
+      padding-bottom: 0.5rem;
+      padding-top: 1rem; }
+    .my_page--post h2 {
+      font-size: 1.6rem;
+      color: #444; }
+    .my_page--post h3 {
+      font-size: 1.4rem;
+      color: #444; }
+    .my_page--post h4 {
+      font-size: 1.2rem;
+      color: #444; }
+    .my_page--post h5 {
+      font-size: 1rem; } }
 @media only screen and (max-width: 600px) {
   .main {
     padding: 1rem 1.5rem; }
@@ -765,21 +762,24 @@ a:focus {
   .my_page--post {
     font-size: 1rem;
     padding: 10px; }
-
-  h1 {
-    font-size: 1.6rem;
-    border-top: 3px solid #ddd;
-    color: #3399FF;
-    text-shadow: 1px 1px #efefef, 2px 2px #4da6ff;
-    padding-bottom: 0.5rem;
-    padding-top: 1rem; }
-
-  h2 {
-    font-size: 1.4rem;
-    color: #444; }
-
-  h3 {
-    font-size: 1.2rem;
-    color: #444; } }
+    .my_page--post h1 {
+      font-size: 1.6rem;
+      border-top: 3px solid #ddd;
+      color: #3399FF;
+      text-shadow: 1px 1px #efefef, 2px 2px #4da6ff;
+      padding-bottom: 0.5rem;
+      padding-top: 1rem; }
+    .my_page--post h2 {
+      font-size: 1.4rem;
+      color: #444; }
+    .my_page--post h3 {
+      font-size: 1.2rem;
+      color: #444; }
+    .my_page--post h4 {
+      font-size: 1rem;
+      color: #444; }
+    .my_page--post h5 {
+      font-size: 0.8rem;
+      color: #444; } }
 
 /*# sourceMappingURL=style.css.map */
