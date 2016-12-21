@@ -57,7 +57,7 @@ sudo mongod --dbpath /var/lib/mongodb/ --logpath /var/log/mongodb/mongodb.log --
 ```Bash
 vi mongo.sh
 
-\#!/bin/bash
+#!/bin/bash
 sudo -S mongod --dbpath /var/lib/mongodb/ --logpath /var/log/mongodb/mongodb.log --logappend & << EOF 
 'password'
 EOF
