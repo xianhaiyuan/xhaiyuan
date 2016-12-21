@@ -2,7 +2,7 @@ name: haiyuan's blog
 author: haiyuan
 url: https://www.xhaiyuan.com
 email: xianhaiyuan@gmail.com
-paginate: 5
+paginate: 8
 paginate_path: "/page:num/"
 baseurl: /
 exclude: ['node_modules', '_site']

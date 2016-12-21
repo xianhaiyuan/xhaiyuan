@@ -57,6 +57,9 @@
 		<h4 id="git">1.首先安装git</h4>
 
 <pre><code class="language-Bash">sudo apt-get install git
+设置git的用户用和邮箱
+git config --global user.name xxx
+git config --global user.email xxx@example.com
 </code></pre>
 
 <h4 id="nnvm">2.n和nvm</h4>
@@ -80,15 +83,36 @@ nvm install 0.12.17
 node -v
 npm -v
 
-安装4.7.0版本，并使用4.7.0的版本
+安装4.7.0版本，并使用4.7.0的版本，注意在切换版本的时候并不会自动把这个版本的包直接加载到另一个版本，也就是说在另一个版本中需要重新安装包
 nvm install v6.9.2
 nvm use v4.7.0
 node -v
 
+设置默认版本
+nvm alias default v4.7.0
 
-安装cnpm
+安装cnpm，由于我已经安装了nvm，所以在全局安装的时候就不用sudo npm
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm -v
+
+</code></pre>
+
+<h4 id="nrm">4.如果想更方便用其他的源，也可以安装nrm</h4>
+
+<p><a href="https://github.com/Pana/nrm">nrm</a> 是一个管理 npm 源的工具。用过 ruby 和 gem 的同学会比较熟悉，通常我们会把 gem 源切到国内的淘宝镜像，这样在安装和更新一些包的时候比较快。nrm 同理，用来切换官方 npm 源和国内的 npm 源（如: <a href="http://cnpmjs.org/">cnpm</a>），当然也可以用来切换官方 npm 源和公司私有 npm 源。</p>
+
+<pre><code class="language-Bash">npm i -g nrm
+nrm ls
+nrm use cnpm
+nrm ls
+</code></pre>
+
+<h4 id="nodemon">5.安装nodemon</h4>
+
+<p>nodemon是一个nodejs监视工具，和supervisor相似。</p>
+
+<pre><code class="language-Bash">cnpm i -g nodemon
+nodemon -v
 </code></pre>
 
 	</div>
