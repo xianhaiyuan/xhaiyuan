@@ -8,14 +8,14 @@
 <!-- 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/monokai-sublime.css"> -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="canonical" href="https://www.xhaiyuan.com/2016/12/20/ubuntu_node_config.html" />
+	<link rel="canonical" href="https://www.xhaiyuan.com/2016/12/21/ubuntu_mongodb_config.html" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-siteapp">
-	<meta name="keywords" content="白色风车 ubuntu配置日记--node配置 海源 个人博客 haiyuan">
+	<meta name="keywords" content="白色风车 ubuntu配置日记--mongodb配置 海源 个人博客 haiyuan">
 	<meta name="description" content="白色风车 海源 haiyuan">
 	<meta name="author" content="海源,haiyuan,xianhaiyuan@gmail.com,269699181@qq.com">
-	<title>ubuntu配置日记--node配置 - 海源的博客</title>
+	<title>ubuntu配置日记--mongodb配置 - 海源的博客</title>
 	<script>
 // 	(function() {
 //     if ( window.location.protocol.indexOf('s') < 0 ) {
@@ -28,7 +28,7 @@
 <body>
 	<div class="main">
 		<div class="page-title center">
-			ubuntu配置日记--node配置
+			ubuntu配置日记--mongodb配置
 		</div>
 	<nav>
 		<ul class="nav-list list-nostyled center">
@@ -54,70 +54,79 @@
 		</ul>
 	</nav>
 	<div class="my_page my_page--post web-font">
-		<h4 id="git">1.首先安装git</h4>
+		<h4 id="section">1.导入软件仓库的公匙</h4>
 
 <p><code class="highlighter-rouge">Bash
-sudo apt-get install git
-设置git的用户用和邮箱
-git config --global user.name xxx
-git config --global user.email xxx@example.com
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 </code></p>
 
-<h4 id="nnvm">2.n和nvm</h4>
+<h4 id="section-1">2.同步软件源</h4>
 
-<p>通常我们使用稳定的 LTS 版本的 Node.js 即可，但有的情况下我们又想尝试一下新的特性，我们总不能来回安装不同版本的 Node.js 吧，这个时候我们就需要 <a href="https://github.com/tj/n">n</a> 或者 <a href="https://github.com/creationix/nvm">nvm</a> 了。n 和 nvm 是两个常用的 Node.js 版本管理工具，关于 n 和 nvm 的使用以及区别，<a href="http://taobaofed.org/blog/2015/11/17/nvm-or-n/">这篇文章</a> 讲得特别详细，这里不再赘述。</p>
-
-<h4 id="nvm">3.安装nvm</h4>
 <p>```Bash
-git clone https://github.com/creationix/nvm.git ~/.nvm &amp;&amp; cd ~/.nvm &amp;&amp; git checkout <code class="highlighter-rouge">git describe --abbrev=0 --tags</code></p>
+echo “deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse” | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list</p>
 
-<p>配置环境变量
-cd
-vim ~/.bashrc
-source ~/.nvm/nvm.sh
-source .bashrc</p>
+<p>sudo apt-get update
+```</p>
 
-<p>nvm –versioin</p>
-
-<p>安装node和npm
-nvm ls-remove
-nvm install 0.12.17
-node -v
-npm -v</p>
-
-<p>安装4.7.0版本，并使用4.7.0的版本，注意在切换版本的时候并不会自动把这个版本的包直接加载到另一个版本，也就是说在另一个版本中需要重新安装包
-nvm install v6.9.2
-nvm use v4.7.0
-node -v</p>
-
-<p>设置默认版本
-nvm alias default v4.7.0</p>
-
-<p>安装cnpm，由于我已经安装了nvm，所以在全局安装的时候就不用sudo npm
-npm install -g cnpm –registry=https://registry.npm.taobao.org
-cnpm -v</p>
-
-<p>```</p>
-
-<h4 id="nrm">4.如果想更方便用其他的源，也可以安装nrm</h4>
-
-<p><a href="https://github.com/Pana/nrm">nrm</a> 是一个管理 npm 源的工具。用过 ruby 和 gem 的同学会比较熟悉，通常我们会把 gem 源切到国内的淘宝镜像，这样在安装和更新一些包的时候比较快。nrm 同理，用来切换官方 npm 源和国内的 npm 源（如: <a href="http://cnpmjs.org/">cnpm</a>），当然也可以用来切换官方 npm 源和公司私有 npm 源。</p>
+<h4 id="mongodb">3.安装mongodb</h4>
 
 <p><code class="highlighter-rouge">Bash
-npm i -g nrm
-nrm ls
-nrm use cnpm
-nrm ls
+sudo apt-get install -y mongodb-org
 </code></p>
 
-<h4 id="nodemon">5.安装nodemon</h4>
+<p>mongodb的其他安装可以到官网查看，<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">这里</a>是ubuntu的mongodb官网安装指导：</p>
 
-<p>nodemon是一个nodejs监视工具，和supervisor相似。</p>
+<p>最后安装<a href="https://mongobooster.com">mongobooster</a></p>
+
+<h4 id="mongodb-1">4.关于mongodb</h4>
 
 <p><code class="highlighter-rouge">Bash
-cnpm i -g nodemon
-nodemon -v
+启动mongodb服务
+sudo service mongod start
+关闭mongodb服务
+sudo service mongod stop
 </code></p>
+
+<ul>
+  <li>数据文件存放位置：/var/lib/mongodb</li>
+  <li>日志文件存放位置：/var/log/mongodb</li>
+  <li>数据库配置文件位置：/etc/mongod.conf，mongod.conf里保存有数据库数据文件路径，日志文件路径，端口号等，可以进行自定义设置。</li>
+</ul>
+
+<p><strong>上面方式开启服务，一旦打开其他软件就会断开，所以使用这条命令指定开启服务时数据文件和日志文件的路径并在后台运行：</strong></p>
+
+<p><code class="highlighter-rouge">Bash
+sudo mongod --dbpath /var/lib/mongodb/ --logpath /var/log/mongodb/mongodb.log --logappend &amp;
+</code></p>
+
+<p><strong>为方便启动，可以写一个shell文件</strong></p>
+
+<p>```Bash
+vi mongo.sh</p>
+
+<p>#!/bin/bash
+sudo -S mongod –dbpath /var/lib/mongodb/ –logpath /var/log/mongodb/mongodb.log –logappend &amp; « EOF 
+‘password’
+EOF</p>
+
+<p>chmod +x mongo.sh
+./mongo.sh
+```</p>
+
+<p><code class="highlighter-rouge">Bash
+关闭服务
+ps -aux | grep mongo
+sudo kill 'PID'
+</code></p>
+
+<ul>
+  <li>–dbpath：指定mongo的数据库文件在哪个文件夹。</li>
+  <li>–logpath：指定mongo的log日志是哪个，这里log一定要指定到具体的文件名。</li>
+  <li>–logappend：表示log的写入是采用附加的方式，默认的是覆盖之前的文件。</li>
+  <li>&amp;：表示程序在后台运行。</li>
+</ul>
+
+<p><strong>注意</strong>：如果是系统非正常关闭，这样启动会报错，由于mongodb自动被锁上了，这是需要进入mongodb数据库文件所在的目录（/var/lib/mongodb/）,删除目录中的mongodb.lock文件,然后再进行上述操作。</p>
 
 	</div>
 </div>

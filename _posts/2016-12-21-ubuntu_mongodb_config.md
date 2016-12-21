@@ -46,20 +46,27 @@ sudo service mongod stop
 - 数据库配置文件位置：/etc/mongod.conf，mongod.conf里保存有数据库数据文件路径，日志文件路径，端口号等，可以进行自定义设置。
 
 **上面方式开启服务，一旦打开其他软件就会断开，所以使用这条命令指定开启服务时数据文件和日志文件的路径并在后台运行：**
+
 ```Bash
 sudo mongod --dbpath /var/lib/mongodb/ --logpath /var/log/mongodb/mongodb.log --logappend &
+```
 
-为方便启动，可以写一个shell文件
+
+**为方便启动，可以写一个shell文件**
+
+```Bash
 vi mongo.sh
 
-#!/bin/bash
+\#!/bin/bash
 sudo -S mongod --dbpath /var/lib/mongodb/ --logpath /var/log/mongodb/mongodb.log --logappend & << EOF 
 'password'
 EOF
 
 chmod +x mongo.sh
 ./mongo.sh
+```
 
+```Bash
 关闭服务
 ps -aux | grep mongo
 sudo kill 'PID'

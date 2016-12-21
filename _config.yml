@@ -8,6 +8,7 @@ baseurl: /
 exclude: ['node_modules', '_site']
 gems:
   - jekyll-paginate
+markdown: kramdown
 defaults:
   -
     values:

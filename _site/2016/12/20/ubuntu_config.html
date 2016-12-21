@@ -8,7 +8,7 @@
 <!-- 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/monokai-sublime.css"> -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="canonical" href="http://localhost:4000/2016/12/20/ubuntu_config.html" />
+	<link rel="canonical" href="https://www.xhaiyuan.com/2016/12/20/ubuntu_config.html" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-siteapp">
@@ -33,17 +33,17 @@
 	<nav>
 		<ul class="nav-list list-nostyled center">
 			<li>
-				<a class="nav-icon" href="http://localhost:4000">
+				<a class="nav-icon" href="https://www.xhaiyuan.com">
 					<i class="icon-home"></i>
 				</a>
-				<a href="http://localhost:4000" class="nav-link center link-active">Home
+				<a href="https://www.xhaiyuan.com" class="nav-link center link-active">Home
 				</a>
 			</li>
 			<li>
-				<a class="nav-icon" href="http://localhost:4000/about">
+				<a class="nav-icon" href="https://www.xhaiyuan.com/about">
 					<i class="icon-user"></i>
 				</a>
-				<a href="http://localhost:4000/about" class="nav-link center link-active">About
+				<a href="https://www.xhaiyuan.com/about" class="nav-link center link-active">About
 				</a>
 			</li>
 			<li class="rss">
@@ -56,12 +56,13 @@
 	<div class="my_page my_page--post web-font">
 		<h4 id="section">1.首先更换源。</h4>
 
-<pre><code class="language-Bash">cd /etc/apt/
+<p>```Bash
+cd /etc/apt/
 sudo cp sources.list sources.list.bk
-vi sources.list
+vi sources.list</p>
 
-# deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
-deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
+<h1 id="deb-cdromubuntu-1604-lts-xenial-xerus---release-amd64-201604201-xenial-main-restricted">deb cdrom:[Ubuntu 16.04 LTS <em>Xenial Xerus</em> - Release amd64 (20160420.1)]/ xenial main restricted</h1>
+<p>deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
 deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
@@ -77,21 +78,23 @@ deb-src http://archive.canonical.com/ubuntu xenial partner
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
 deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe #Added by software-properties
 deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
-deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse</p>
 
-sudo apt-get update
-</code></pre>
+<p>sudo apt-get update
+```</p>
 
 <h4 id="ubuntuvim">2.由于ubuntu自带的vim很恶心，所以重新装一个。</h4>
 
-<pre><code class="language-Bash">sudo apt-get remove vim-common
+<p><code class="highlighter-rouge">Bash
+sudo apt-get remove vim-common
 sudo apt-get install vim
-</code></pre>
+</code></p>
 
 <h4 id="ssh">3.安装ssh服务器</h4>
-<pre><code class="language-Bash">sudo apt-get install openssh-server
+<p><code class="highlighter-rouge">Bash
+sudo apt-get install openssh-server
 /etc/init.d/ssh restart
-</code></pre>
+</code></p>
 
 	</div>
 </div>

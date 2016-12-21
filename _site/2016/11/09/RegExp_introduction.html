@@ -8,7 +8,7 @@
 <!-- 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/monokai-sublime.css"> -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="canonical" href="http://localhost:4000/2016/11/09/RegExp_introduction.html" />
+	<link rel="canonical" href="https://www.xhaiyuan.com/2016/11/09/RegExp_introduction.html" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="Cache-Control" content="no-siteapp">
@@ -33,17 +33,17 @@
 	<nav>
 		<ul class="nav-list list-nostyled center">
 			<li>
-				<a class="nav-icon" href="http://localhost:4000">
+				<a class="nav-icon" href="https://www.xhaiyuan.com">
 					<i class="icon-home"></i>
 				</a>
-				<a href="http://localhost:4000" class="nav-link center link-active">Home
+				<a href="https://www.xhaiyuan.com" class="nav-link center link-active">Home
 				</a>
 			</li>
 			<li>
-				<a class="nav-icon" href="http://localhost:4000/about">
+				<a class="nav-icon" href="https://www.xhaiyuan.com/about">
 					<i class="icon-user"></i>
 				</a>
-				<a href="http://localhost:4000/about" class="nav-link center link-active">About
+				<a href="https://www.xhaiyuan.com/about" class="nav-link center link-active">About
 				</a>
 			</li>
 			<li class="rss">
@@ -65,9 +65,9 @@
 
 <p>构造函数定义接受两个参数，一个是要匹配的字符串模式(注意此参数是字符串，不能是正则表达式字面量)，另一个是可选的标志字符串，即g,i,m</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"java[script]"</span><span class="p">,</span><span class="s1">'gim'</span><span class="p">);</span>    
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">javascript
+var reg = new RegExp("java[script]",'gim');    
+</code></p>
 
 <p>g,i,m为可选属性。</p>
 
@@ -79,9 +79,9 @@
 
 <p>2.字面量定义</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/</span><span class="se">(\w</span><span class="sr">+</span><span class="se">)\s(\w</span><span class="sr">+</span><span class="se">)</span><span class="sr">/</span><span class="p">;</span>
-</code></pre>
-</div>
+<p><code class="highlighter-rouge">javascript
+var reg = /(\w+)\s(\w+)/;
+</code></p>
 
 <p>3.构造函数定义与字面量定义比较</p>
 
@@ -124,19 +124,19 @@
 
 <p>在ECMAScript3中，正则表达式字面量会始终共享同一个RegExp实例，而使用构造函数创建的每一个新RegExp都是一个新的实例。</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span><span class="nx">i</span><span class="p">;</span>
-	
-<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-	<span class="nx">reg</span> <span class="o">=</span> <span class="sr">/java/g</span><span class="p">;</span>
-	<span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">"javascript"</span><span class="p">);</span>
-<span class="p">}</span>
-	
-<span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
-	<span class="nx">reg</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"java"</span><span class="p">,</span><span class="s2">"g"</span><span class="p">);</span>
-	<span class="nx">reg</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="s2">"javascript"</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p>```javascript
+var reg = null,i;</p>
+
+<p>for (i = 0; i &lt; 10; i++){
+	reg = /java/g;
+	reg.test(“javascript”);
+}</p>
+
+<p>for (i = 0; i &lt; 10; i++){
+	reg = new RegExp(“java”,”g”);
+	reg.test(“javascript”);
+}
+```</p>
 
 <p>第一个循环中第一次调用test()找到了”java”,但第二次调用从索引为3(上一次匹配的末尾)的字符开始,所以第二次就匹配不到，由于匹配会一直找到字符串末尾，所以下一次再调用test()又会重头开始。</p>
 
@@ -183,36 +183,35 @@
   </tbody>
 </table>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"this has been a short summer"</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="sr">/</span><span class="se">(</span><span class="sr">.</span><span class="se">)</span><span class="sr">hort/g</span><span class="p">;</span>
-        
-       
-<span class="k">if</span> <span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">text</span><span class="p">)){</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">.</span><span class="nx">input</span><span class="p">);</span>               <span class="c1">//this has been a short summer</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">.</span><span class="nx">leftContext</span><span class="p">);</span>         <span class="c1">//this has been a            </span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">.</span><span class="nx">rightContext</span><span class="p">);</span>        <span class="c1">// summer</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">.</span><span class="nx">lastMatch</span><span class="p">);</span>           <span class="c1">//short</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">.</span><span class="nx">lastParen</span><span class="p">);</span>           <span class="c1">//s</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">.</span><span class="nx">multiline</span><span class="p">);</span>           <span class="c1">//false</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p>```javascript
+var text = “this has been a short summer”;
+var pattern = /(.)hort/g;</p>
+
+<p>if (pattern.test(text)){
+alert(RegExp.input);               //this has been a short summer
+alert(RegExp.leftContext);         //this has been a          <br />
+alert(RegExp.rightContext);        // summer
+alert(RegExp.lastMatch);           //short
+alert(RegExp.lastParen);           //s
+alert(RegExp.multiline);           //false
+}
+```</p>
 
 <p>注意：某些属性在某些浏览器可能未实现。</p>
 
 <p>除了上面的几个属性外，还有9个用于存储捕获组的属性。访问语法是RegExp.$1,RegExp.$2…RegExp.$9，在调用test()和exec()方法时，这些属性会被自动填充。</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"this has been a short summer"</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">pattern</span> <span class="o">=</span> <span class="sr">/</span><span class="se">(</span><span class="sr">..</span><span class="se">)</span><span class="sr">or</span><span class="se">(</span><span class="sr">.</span><span class="se">)</span><span class="sr">/g</span><span class="p">;</span>
-              
-<span class="k">if</span> <span class="p">(</span><span class="nx">pattern</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">text</span><span class="p">)){</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">[</span><span class="s2">"$1"</span><span class="p">]);</span>       <span class="c1">//sh</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">[</span><span class="s2">"$2"</span><span class="p">]);</span>       <span class="c1">//t</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">[</span><span class="s2">"$`"</span><span class="p">]);</span>       <span class="c1">//this has been a </span>
-<span class="nx">alert</span><span class="p">(</span><span class="nb">RegExp</span><span class="p">[</span><span class="s2">"$'"</span><span class="p">]);</span>       <span class="c1">// summer</span>
-<span class="p">}</span>
-</code></pre>
-</div>
+<p>```javascript
+var text = “this has been a short summer”;
+var pattern = /(..)or(.)/g;</p>
+
+<p>if (pattern.test(text)){
+alert(RegExp[“$1”]);       //sh
+alert(RegExp[“$2”]);       //t
+alert(RegExp[”$<code class="highlighter-rouge">"]);       //this has been a 
+alert(RegExp["$'"]);       // summer
+}
+</code>``</p>
 
 <h4 id="section-2">2.正则方法</h4>
 
@@ -220,46 +219,46 @@
 
 <p>exec()方法接受一个参数，即要应用模式的字符串，返回包含第一个匹配项信息的数组，没有匹配项的情况下返回null。返回的是Array实例，另外还包含两个额外的属性，index和input，index表示匹配项在字符串中的位置，input表示应用正则表达式的字符串。</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"mom and dad and baby"</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">reg</span> <span class="o">=</span> <span class="sr">/mom</span><span class="se">(</span><span class="sr"> and dad</span><span class="se">(</span><span class="sr"> and baby</span><span class="se">)?)?</span><span class="sr">/gi</span><span class="p">;</span>
-	
-<span class="kd">var</span> <span class="nx">matches</span> <span class="o">=</span> <span class="nx">reg</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>    <span class="c1">//0</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">input</span><span class="p">);</span>    <span class="c1">//"mom and dad and baby"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>       <span class="c1">//"mom and dad and baby"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>       <span class="c1">//" and dad and baby"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>       <span class="c1">//" and baby"</span>
-</code></pre>
-</div>
+<p>```javascript
+var text = “mom and dad and baby”;
+var reg = /mom( and dad( and baby)?)?/gi;</p>
+
+<p>var matches = reg.exec(text);
+alert(matches.index);    //0
+alert(matches.input);    //”mom and dad and baby”
+alert(matches[0]);       //”mom and dad and baby”
+alert(matches[1]);       //” and dad and baby”
+alert(matches[2]);       //” and baby”
+```</p>
 
 <p>对于exec()方法而言，在模式中设置了g，它每次也只返回一个匹配项，但每次调用exec()都会在字符串中继续查找新的匹配项，如不设置g，每次调用exec()都只返回第一个匹配的信息。</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"cat, bat, sat, fat"</span><span class="p">;</span>        
-<span class="kd">var</span> <span class="nx">pattern1</span> <span class="o">=</span> <span class="sr">/.at/</span><span class="p">;</span>
-        
-<span class="kd">var</span> <span class="nx">matches</span> <span class="o">=</span> <span class="nx">pattern1</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>        
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>     <span class="c1">//0</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>        <span class="c1">//"cat"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">pattern1</span><span class="p">.</span><span class="nx">lastIndex</span><span class="p">);</span><span class="c1">//0</span>
+<p>```javascript
+var text = “cat, bat, sat, fat”;      <br />
+var pattern1 = /.at/;</p>
 
-<span class="nx">matches</span> <span class="o">=</span> <span class="nx">pattern1</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>        
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>     <span class="c1">//0</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>        <span class="c1">//"cat"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">pattern1</span><span class="p">.</span><span class="nx">lastIndex</span><span class="p">);</span><span class="c1">//0</span>
+<p>var matches = pattern1.exec(text);      <br />
+alert(matches.index);     //0
+alert(matches[0]);        //”cat”
+alert(pattern1.lastIndex);//0</p>
 
-<span class="kd">var</span> <span class="nx">pattern2</span> <span class="o">=</span> <span class="sr">/.at/g</span><span class="p">;</span>
-        
-<span class="kd">var</span> <span class="nx">matches</span> <span class="o">=</span> <span class="nx">pattern2</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>        
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>     <span class="c1">//0</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>        <span class="c1">//"cat"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">pattern2</span><span class="p">.</span><span class="nx">lastIndex</span><span class="p">);</span><span class="c1">//3</span>
+<p>matches = pattern1.exec(text);      <br />
+alert(matches.index);     //0
+alert(matches[0]);        //”cat”
+alert(pattern1.lastIndex);//0</p>
 
-<span class="nx">matches</span> <span class="o">=</span> <span class="nx">pattern2</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>        
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">.</span><span class="nx">index</span><span class="p">);</span>     <span class="c1">//5</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">matches</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>        <span class="c1">//"bat"</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">pattern2</span><span class="p">.</span><span class="nx">lastIndex</span><span class="p">);</span><span class="c1">//8</span>
-</code></pre>
-</div>
+<p>var pattern2 = /.at/g;</p>
+
+<p>var matches = pattern2.exec(text);      <br />
+alert(matches.index);     //0
+alert(matches[0]);        //”cat”
+alert(pattern2.lastIndex);//3</p>
+
+<p>matches = pattern2.exec(text);      <br />
+alert(matches.index);     //5
+alert(matches[0]);        //”bat”
+alert(pattern2.lastIndex);//8
+```</p>
 
 <p>(2)test(str)</p>
 
@@ -310,40 +309,40 @@
 
 <p>注意调用函数str.replace(),并不改变str的值,而是返回一个副本。</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="s2">"first_second"</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">text_replaced</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/first/</span><span class="p">,</span><span class="s2">"1"</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>    <span class="c1">//first_second</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">text_replaced</span><span class="p">);</span>    <span class="c1">//1_second</span>
+<p>```javascript
+var text = “first_second”;
+var text_replaced = text.replace(/first/,”1”);
+alert(text);    //first_second
+alert(text_replaced);    //1_second</p>
 
-<span class="nx">text_replaced</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">first</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span><span class="s2">"1$1"</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">text_replaced</span><span class="p">);</span>     <span class="c1">//1first_second</span>
+<p>text_replaced = text.replace(/(first)/,”1$1”);
+alert(text_replaced);     //1first_second</p>
 
-<span class="nx">text_replaced</span> <span class="o">=</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">(</span><span class="sr">first</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span><span class="s2">"1$`"</span><span class="p">);</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">text_replaced</span><span class="p">);</span>     <span class="c1">//1_second</span>
-</code></pre>
-</div>
+<p>text_replaced = text.replace(/(first)/,”1$<code class="highlighter-rouge">");
+alert(text_replaced);     //1_second
+</code>``</p>
 
 <p>若第二个参数是一个函数,那么这个函数的有三个参数，分别代表匹配到的字符串，匹配的字符串在位置，和原字符串，后两个参数是可选。常见用法如下：</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">htmlEscape</span><span class="p">(</span><span class="nx">text</span><span class="p">){</span>
-            <span class="k">return</span> <span class="nx">text</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[</span><span class="sr">&lt;&gt;"&amp;</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">match</span><span class="p">,</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">originalText</span><span class="p">){</span>
-                <span class="k">switch</span><span class="p">(</span><span class="nx">match</span><span class="p">){</span>
-                    <span class="k">case</span> <span class="s2">"&lt;"</span><span class="err">:</span>
-                        <span class="k">return</span> <span class="s2">"&amp;lt;"</span><span class="p">;</span>
-                    <span class="k">case</span> <span class="s2">"&gt;"</span><span class="err">:</span>
-                        <span class="k">return</span> <span class="s2">"&amp;gt;"</span><span class="p">;</span>
-                    <span class="k">case</span> <span class="s2">"&amp;"</span><span class="err">:</span>
-                        <span class="k">return</span> <span class="s2">"&amp;amp;"</span><span class="p">;</span>
-                    <span class="k">case</span> <span class="s2">"\""</span><span class="err">:</span>
-                        <span class="k">return</span> <span class="s2">"&amp;quot;"</span><span class="p">;</span>
-                <span class="p">}</span>             
-            <span class="p">});</span>
-        <span class="p">}</span>
-        
-<span class="nx">alert</span><span class="p">(</span><span class="nx">htmlEscape</span><span class="p">(</span><span class="s2">"&lt;p class=\"greeting\"&gt;Hello world!&lt;/p&gt;"</span><span class="p">));</span>
-<span class="c1">//&amp;lt;p class=&amp;quot;greeting&amp;quot;&amp;gt;Hello world!&amp;lt;/p&amp;gt;</span>
-</code></pre>
-</div>
+<p>```javascript
+function htmlEscape(text){
+            return text.replace(/[&lt;&gt;”&amp;]/g, function(match, pos, originalText){
+                switch(match){
+                    case “&lt;”:
+                        return “&lt;”;
+                    case “&gt;”:
+                        return “&gt;”;
+                    case “&amp;”:
+                        return “&amp;”;
+                    case “"”:
+                        return “"”;
+                }           <br />
+            });
+        }</p>
+
+<p>alert(htmlEscape(“&lt;p class="greeting"&gt;Hello world!&lt;/p&gt;”));
+//&lt;p class="greeting"&gt;Hello world!&lt;/p&gt;
+```</p>
 
 
 	</div>
