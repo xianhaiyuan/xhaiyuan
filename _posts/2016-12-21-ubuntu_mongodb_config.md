@@ -65,9 +65,9 @@ EOF
 chmod +x mongo.sh
 ./mongo.sh
 ```
+**关闭服务**
 
 ```Bash
-关闭服务
 ps -aux | grep mongo
 sudo kill 'PID'
 ```
