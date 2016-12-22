@@ -43,13 +43,17 @@ nvm install 0.12.17
 node -v
 npm -v
 
-安装4.7.0版本，并使用4.7.0的版本，注意在切换版本的时候并不会自动把这个版本的包直接加载到另一个版本，也就是说在另一个版本中需要重新安装包
-nvm install v6.9.2
-nvm use v4.7.0
+安装6.9.1版本，并使用6.9.1的版本，注意在切换版本的时候并不会自动把这个版本的包直接加载到另一个版本，也就是说在另一个版本中需要重新安装包
+nvm install v6.9.1
+nvm use v6.9.1
 node -v
 
 设置默认版本
-nvm alias default v4.7.0
+nvm alias default v6.9.1
+
+重新打开终端
+node -v
+才能生效
 
 安装cnpm，由于我已经安装了nvm，所以在全局安装的时候就不用sudo npm
 npm install -g cnpm --registry=https://registry.npm.taobao.org
