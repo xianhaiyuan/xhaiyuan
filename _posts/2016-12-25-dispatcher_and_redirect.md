@@ -14,13 +14,13 @@ excerpt: 站内请求和站外请求URL重定向）概念，区别，使用，�
 ### 站内请求和站外请求的概念
 
 #### 1. 站内请求
-
-![](/img/post-dispatcher_and_redirect/dispatcher.jpg) 
+<br>
+![](/img/post-dispatcher_and_redirect/dispatcher.jpg)
 
 上图所示，站内请求只对服务器发出一次请求，服务器返回页面2，但此时浏览器地址栏中的地址还是页面1的地址，并不会发生改变，因为是一次请求，所以request的scope会作用于页面1、页面2等等，即在请求中放的参数在页面1、页面2等都能提取得到。
 
 #### 2. 站外请求（URL重定向）
-
+<br>
 ![](/img/post-dispatcher_and_redirect/redirect.jpg) 
 
 站外请求对服务器发出两次请求，第一次请求页面1，服务器返回信息给浏览器，叫浏览器去请求页面2，此时浏览器会再次请求服务器，服务器返回页面2，此时浏览器地址栏的地址显示为页面2的地址，由于request1和request2是两个不同的请求，request1的scope在页面1，不在页面2，request2的scope在页面2，不在页面1。
@@ -32,15 +32,15 @@ excerpt: 站内请求和站外请求URL重定向）概念，区别，使用，�
 一般情况下在多个页面内传递参数，就要用到站内跳转，或者浏览器的地址不需要放生改变的情况下可以用站内跳转。
 
 浏览器地址不需要发生改变的情况：
-
-![](/img/post-dispatcher_and_redirect/select.jpg) 
+<br>
+![](/img/post-dispatcher_and_redirect/select.jpg)
 
 浏览器对服务器发起请求查询员工信息，服务器返回员工信息的页面，此时浏览器的地址没有发生改变，刷新浏览器（F5）可以再次向服务器发起请求。
 
 request的scope需要作用于多个页面（多个页面内传递参数）或浏览器地址不需要改变的情况下可以用到站内跳转。
 
 #### 2. 什么时候用站外请求（URL重定向）
-
+<br>
 ![](/img/post-dispatcher_and_redirect/update.jpg) 
 
 浏览器向服务器提交表单更新数据，若更新成功，则重定向到页面2，失败则重定向到页面3，此时如果浏览器地址栏的地址不发生改变，再次刷新浏览器，则会发生重复提交表单。所以此时无论提交成功或失败都要重定向到新的页面。
