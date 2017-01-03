@@ -5,8 +5,6 @@ title: 关于我
 excerpt:
 ---
 
-## 个人简介 ##
-- 学校：目前就读于湛江师范学院  
+## 个人简介 ## 
 - 沉迷：web前端、羽毛球
-- 最近状态：学习、准备考研
 - e-mail：xianhaiyuan@gmail.com
