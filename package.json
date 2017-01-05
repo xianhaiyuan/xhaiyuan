@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "a test",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./build/test.js",
+    "dev": "gulp dev",
+    "build": "rimraf dist && gulp build"
+  },
+  "author": "haiyuan",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "browser-sync": "^2.18.5",
+    "cssgrace": "^3.0.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-swig": "^0.8.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-useref": "^3.1.2"
+  }
+}
