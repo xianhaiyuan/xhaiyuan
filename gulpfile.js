@@ -18,6 +18,8 @@ var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var cssgrace = require('cssgrace');
+var plumber = require('gulp-plumber');
+var $ = require('gulp-load-plugins');
 
 var processors = [
     autoprefixer({
