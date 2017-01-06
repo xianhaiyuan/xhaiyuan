@@ -19,7 +19,10 @@ var uglify = require('gulp-uglify');
 var postcss = require('gulp-postcss');
 var cssgrace = require('cssgrace');
 var plumber = require('gulp-plumber');
+var fontmin = require('gulp-fontmin');
+var notify = require('gulp-notify');
 var $ = require('gulp-load-plugins');
+
 
 var processors = [
     autoprefixer({
