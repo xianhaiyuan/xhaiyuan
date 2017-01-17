@@ -190,6 +190,9 @@ code.highlighter-rouge, tt {
   border-radius: 3px;
   color: #3399FF; }
 
+code{
+  border-radius:5px;}
+
 code, tt {
   background-color: transparent;
   border: none; }
