@@ -1,0 +1,101 @@
+body{
+	background-color: #E0F7FB;
+	margin: 0;
+	padding: 0;
+	color: #7c7a7a;
+}
+
+.f-fl{
+	float: left;
+}
+.f-fr{
+	float: right;
+}
+.f-clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    visibility:hidden;
+    clear:both;
+}
+.g-hd{
+	height: 105px;
+}
+.g-bd{
+	padding-top: 1rem;
+	font-weight: 600;
+	font-size: 1.4rem;
+}
+.m-sck{
+	width: 100%;
+}
+.g-hd .m-tt{
+	font-size: 1.8rem;
+	font-weight: 900;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 80px;
+	height: 100%;
+	border-bottom: 1px solid #aaa;
+}
+.m-sck .m-tt{
+	margin-left: 1rem;
+	padding: .5rem 0;
+}
+.m-sck .m-ipt{
+	padding: .5rem 0;
+	padding: 0 1%;
+	width: 48%;
+	float: left;
+}
+.msg, .cryp{
+	width: 100%;
+	font-size: 1.2rem;
+	color: #7c7a7a;
+	font-weight: 900;
+}
+.m-sck .m-tip{
+	padding: .5rem 0;
+	width: 100%;
+}
+
+.m-sck .m-box{
+	width: 100%;
+	padding: .5rem 0;
+}
+
+.m-sck .m-btn{
+	cursor: pointer;
+	background-color: #3485FB;
+	border-radius: 10%;
+	color: #fff;
+	padding: .5rem 1.3rem;
+	font-size: 1rem;
+	margin-top: .2rem;
+	margin-right: 1%;
+}
+
+.m-key{
+	width: 180px;
+	height: 20px;
+}
+
+.g-ft{
+	text-align: center;
+	color: #333333;
+	font-size: 12px;
+}
+
+@media only screen and (max-width: 720px) {
+	.m-sck .m-ipt{
+		width: 90%;
+		margin-left: 1rem;
+		padding: .5rem 0;
+		display: block;
+		float: none;
+	}
+
+	.m-sck .m-btn{
+		margin-right: 5.5%;
+	}
+}

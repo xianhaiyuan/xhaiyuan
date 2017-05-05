@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="description" content="安全散列算法(HASH)">
+    <meta name="keywords" content="安全散列算法(HASH)">
+    <meta name="author" content="冼海源">
+    <title>安全散列算法(HASH)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="g-hd">
+        <div class="m-tt">
+            安全散列算法(HASH)
+        </div>
+    </div>
+
+    <div class="g-bd f-clearfix">
+        <div class="m-sck m-sck1 f-clearfix">
+            <div class="m-tt">
+                直接加密消息
+            </div>
+            <div class="m-tip f-clearfix">
+                <div class="m-tt f-fl">
+                    请输入消息(明文)：
+                </div>
+            </div>
+            <div class="m-ipt">
+                <textarea name="msg1" id="msg1" class="msg" rows="5" required autofocus></textarea>
+            </div>
+            <div class="m-ipt">
+                <textarea name="cryp1" id="cryp1" class="cryp" rows="5"></textarea>
+            </div>
+            <div class="m-box f-fl">
+                <div class="m-btn f-fr btn1">
+                    处理
+                </div>
+            </div>
+        </div>
+
+        <div class="m-sck m-sck2 f-clearfix">
+            <div class="m-tt">
+                数字签名
+            </div>
+            <div class="m-tip1 f-clearfix">
+                <div class="m-tt">
+                    请输入密钥：
+                </div>
+                <div class="m-ipt">
+                    <input type="text" name="key" class="m-key" required>
+                </div>
+            </div>
+            <div class="m-tip2 f-clearfix">
+                <div class="m-tt f-fl">
+                    请输入消息(明文)：
+                </div>
+            </div>
+            <div class="m-ipt">
+                <textarea name="msg2" id="msg2" class="msg" rows="5" required autofocus></textarea>
+            </div>
+            <div class="m-ipt">
+                <textarea name="cryp2" id="cryp2" class="cryp" rows="5"></textarea>
+            </div>
+            <div class="m-box f-fl">
+                <div class="m-btn f-fr btn2">
+                    处理
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="g-ft">
+        <p>Copyright&copy; 2015-2017 冼海源</p>
+    </div>
+    <script src="sha1.js"></script>
+    <script src="ctrl.js"></script>
+</body>
+
+</html>
