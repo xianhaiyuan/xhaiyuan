@@ -66,13 +66,18 @@ body{
 
 .m-sck .m-btn{
 	cursor: pointer;
-	background-color: #3485FB;
+	background-color: #4d98f9;
 	border-radius: 10%;
 	color: #fff;
 	padding: .5rem 1.3rem;
 	font-size: 1rem;
 	margin-top: .2rem;
 	margin-right: 1%;
+}
+
+.m-sck .m-btn:hover{
+	background-color: #1677f7;
+	transition: all .8s ease;
 }
 
 .m-key{
