@@ -6,5 +6,5 @@ excerpt:
 ---
 
 ## 个人简介 ## 
-- e-mail:xianhaiyuan@gmail.com
+- e-mail:269699181@qq.com、xianhaiyuan@gmail.com
 - 兴趣:计算机技术、羽毛球、数学、英语
