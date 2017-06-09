@@ -6,5 +6,5 @@ excerpt:
 ---
 
 ## 个人简介 ## 
-- 沉迷：web前端、羽毛球
 - e-mail:xianhaiyuan@gmail.com
+- 兴趣:计算机技术、羽毛球、数学、英语
