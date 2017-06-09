@@ -7,4 +7,4 @@ excerpt:
 
 ## 个人简介 ## 
 - 沉迷：web前端、羽毛球
-- e-mail：xianhaiyuan@gmail.com
+- e-mail:xianhaiyuan@gmail.com
