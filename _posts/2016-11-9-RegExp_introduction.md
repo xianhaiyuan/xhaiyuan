@@ -1,5 +1,5 @@
 ---
-title: Javascript正则一篇入门，不入魂
+title: Javascript正则一篇入门
 layout: post
 time: 2016/11/9
 tags:
