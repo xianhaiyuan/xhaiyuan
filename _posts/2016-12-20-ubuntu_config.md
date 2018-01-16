@@ -49,3 +49,15 @@ sudo apt-get install vim
 sudo apt-get install openssh-server
 /etc/init.d/ssh restart
 ```
+
+或
+```Bash
+sudo apt-get autoremove openssh-client
+sudo apt-get install openssh-client openssh-server
+```
+
+#### 4.安装中文输入法  ####
+```Bash
+sudo apt-get install ibus-pinyin
+sudo ibus-setup
+```
