@@ -60,4 +60,19 @@ sudo apt-get install openssh-client openssh-server
 ```Bash
 sudo apt-get install ibus-pinyin
 sudo ibus-setup
+
+用fcitx的拼音也行
+```
+
+#### 5.sublime中文输入解决  ####
+```Bash
+git clone https://github.com/xianhaiyuan/sublime-text-imfix.git
+
+cd ~/sublime-text-imfix
+sudo cp ./lib/libsublime-imfix.so /opt/sublime_text/
+sudo cp ./src/subl /usr/bin/
+
+新建一个shell脚本(subl)
+#!/bin/sh
+LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text "$@"
 ```
