@@ -32,13 +32,14 @@ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git check
 配置环境变量
 cd
 vim ~/.bashrc
-source ~/.nvm/nvm.sh
+将  source ~/.nvm/nvm.sh  添加到bashrc
+
 source .bashrc
 
-nvm --versioin
+nvm --version
 
 安装node和npm
-nvm ls-remove
+nvm ls
 nvm install 0.12.17
 node -v
 npm -v
