@@ -13,7 +13,7 @@ excerpt: ubuntu初始配置，阅读时间1-3分钟
 ```Bash
 cd /etc/apt/
 sudo cp sources.list sources.list.bk
-vi sources.list
+vi sources.list (替换以下内容)
 
 # deb cdrom:[Ubuntu 16.04 LTS _Xenial Xerus_ - Release amd64 (20160420.1)]/ xenial main restricted
 deb-src http://archive.ubuntu.com/ubuntu xenial main restricted #Added by software-properties
