@@ -39,7 +39,7 @@ source .bashrc
 nvm --version
 
 安装node和npm
-nvm ls
+nvm ls-remote 查看各种版本
 nvm install 0.12.17
 node -v
 npm -v
