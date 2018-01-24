@@ -75,6 +75,7 @@ sudo cp ./src/subl /usr/bin/
 新建一个shell脚本(subl)
 #!/bin/sh
 LD_PRELOAD=/opt/sublime_text/libsublime-imfix.so exec /opt/sublime_text/sublime_text "$@"
-```
 
 此方法要使用fcitx输入法才能起作用
+```
+
